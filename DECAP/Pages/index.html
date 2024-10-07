@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="../Pages/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal CDUC | CAIXA</title>
+</head>
+
+<body>
+  <!--sidenav-->
+  <div id="mySidenav" class="sidenav">
+    <a href="arquitetura.html">Arquitetura e Topologia</a>
+    <a href="dashboards.html">Dashboards</a>
+    <button class="dropdown-btn">Processos</button>
+    <div class="dropdown-container">
+      <a href="capacidades.html">Capacidade</a>
+      <a href="custos.html">Custos</a>
+      <a href="desempenho.html">Desempenho</a>
+      <a href="uso.html">Uso</a>
+    </div>
+    <a href="documentação.html">Documentação</a>
+    <a href="balanceador.html">Balanceador dinâmico</a>
+    <a href="Custos2.html">Custos</a>
+    <a href="performance.html">Performance</a>
+    <a href="showback.html">Showback</a>
+    <a href="simulacao.html">Simulações e Tendências</a>
+    <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
+    <br>
+    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+      <p>Modo Escuro</p>
+    </a>
+    <a>
+      <picture><img src="../Images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+    </a>
+  </div>
+
+  <div id="main">
+    <div class="navbar">
+      <a><img src="../Images/CAIXA_volume_negativa.png" height="22"></a>
+      <a class="split"><img src="../Images/9176.png" height="40px"></a>
+    </div>
+  </div>
+
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+      <h1> Portal CDUC</h1>
+    </center>
+    <center>
+      <h3>(Capacidade, Desempenho, Uso e Custo)</h3>
+    </center>
+    <br>
+    <center>
+      <h4>Portal que visa agregar todas as visões, dashboards, relatórios e acessos aos módulos e informações
+        desenvolvidas pela CESTI65 juntamente com equipes de Capacidade CAIXA</h4>
+    </center>
+  </body>
+  <div class="clearfix"></div>
+
+</html>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  };
+
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("Table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  };
+
+  function darkmode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>

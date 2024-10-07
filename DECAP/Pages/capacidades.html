@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../Pages/style.css" />
+  <title>Portal CDUC | CAIXA</title>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="arquitetura.html">Arquitetura e Topologia</a>
+    <a href="dashboards.html">Dashboards</a>
+    <button class="dropdown-btn">Processos</button>
+    <div class="dropdown-container">
+      <a href="capacidades.html">Capacidade</a>
+      <a href="custos.html">Custos</a>
+      <a href="desempenho.html">Desempenho</a>
+      <a href="uso.html">Uso</a>
+    </div>
+    <a href="documentação.html">Documentação</a>
+    <a href="balanceador.html">Balanceador dinâmico</a>
+    <a href="Custos2.html">Custos</a>
+    <a href="performance.html">Performance</a>
+    <a href="showback.html">Showback</a>
+    <a href="simulacao.html">Simulações e Tendências</a>
+    <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
+    <br>
+    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+      <p>Modo Escuro</p>
+    </a>
+    <a>
+      <picture><img src="../Images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+    </a>
+  </div>
+
+  <div id="main">
+    <div class="navbar">
+      <!--<a href="#news">News</a>-->
+      <a><img src="../Images/CAIXA_volume_negativa.png" height="22"></a>
+      <a class="split"><img src="../Images/9176.png" height="40px"></a>
+    </div>
+  </div>
+
+  </head>
+
+  <body>
+    <br>
+    <div class="tab">
+      <button class="tablinks" onmouseover="openCity(event, 'SUART')">SUART</button>
+      <button class="tablinks" onmouseover="openCity(event, 'CESTI23')">CESTI23</button>
+    </div>
+
+    <div id="SUART" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c033d769cc0c5130732d39"
+                target="_blank">MIPS_NPRD_novo</a></td>
+            <td>Apresentar o tendência de consumo de MIPS das partições de não produção.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c034ce69cc0c5130732d6c"
+                target="_blank">MIPS_PRD_novo</a></td>
+            <td>Apresentar o tendência de consumo de MIPS das partições de produção.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c035af69cc0c5130732dbc"
+                target="_blank">PlanCap_Channel_novo</a></td>
+            <td>Apresentar o utilização de canais para avaliação de capacidade.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0366c69cc0c5130732de2"
+                target="_blank">PlanejamentoCapacidade_CF</a></td>
+            <td>Apresentar utilização de processadores ICF para avaliação de capacidade.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c037d269cc0c5130732df8"
+                target="_blank">PlanejamentoCapacidade_Channel</a></td>
+            <td>Apresentar os indicadores de consumo mensal de Canais.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c039d469cc0c5130732e47"
+                target="_blank">PlanejamentoCapacidade_Memoria</a></td>
+            <td>Apresentar o tendência de consumo de MEMORIA real e virtual.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="CESTI23" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69a653a8acf511c7e92b7"
+                target="_blank">CP_ZIIP_USO_7dias</a></td>
+            <td>Apresenta a distribuição de Processadores Ziip e CP no ambiente nos últimos 7 dias.</td>
+          </tr>
+        </table>
+      </body>
+      <div class="clearfix"></div>
+    </div>
+  </body>
+
+</html>
+
+<script>
+
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  };
+
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("Table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  };
+
+  function darkmode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>

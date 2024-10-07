@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Pages/style.css" />
+<meta charset="utf-8">
+<title>Portal CDUC | CAIXA</title>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="arquitetura.html">Arquitetura e Topologia</a>
+    <a href="dashboards.html">Dashboards</a>
+    <button class="dropdown-btn">Processos</button>
+    <div class="dropdown-container">
+      <a href="capacidades.html">Capacidade</a>
+      <a href="custos.html">Custos</a>
+      <a href="desempenho.html">Desempenho</a>
+      <a href="uso.html">Uso</a>
+    </div>
+    <a href="documentação.html">Documentação</a>
+    <a href="balanceador.html">Balanceador dinâmico</a>
+    <a href="Custos2.html">Custos</a>
+    <a href="performance.html">Performance</a>
+    <a href="showback.html">Showback</a>
+    <a href="simulacao.html">Simulações e Tendências</a>
+    <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
+    <br>
+    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+      <p>Modo Escuro</p>
+    </a>
+    <a>
+      <picture><img src="../Images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+    </a>
+  </div>
+
+  <div id="main">
+    <div class="navbar">
+      <a><img src="../Images/CAIXA_volume_negativa.png" height="22"></a>
+      <a class="split"><img src="../Images/9176.png" height="40px"></a>
+    </div>
+  </div>
+  <br>
+  <div class="tab">
+    <button class="tablinks" onmouseover="openCity(event, 'Custos')">Dashboards de Custos/Uso</button>
+    <button class="tablinks" onmouseover="openCity(event, 'GECTI')">CEGTI</button>
+  </div>
+
+  <div id="Custos" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+    <body>
+      <table id="Table">
+        <tr class="header">
+          <th style="width:50%;">Nome</th>
+          <th style="width:50%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b">4B_Uso_Custos_IBM-ModelMLC</a></td>
+          <td>Apresenta o dashboard de custos no modelo MLC</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/66a159f15d08f45eac6393b6">4B_Uso_Custos_IBM-ModelTFP</a></td>
+          <td>Apresenta o dashboard de custos no modelo TFP</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"
+              target="_blank">4B_Uso_Custos_AcompanhamentoContratoSoftware</a></td>
+          <td>Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento
+            orçamentário.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"
+              target="_blank">4B_Uso_Custos_Consumo-Control-M</a></td>
+          <td>Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e
+            ambiente, e a distribuição do consumo por site com o % de contribuição.</td>
+          </tr>
+          <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"
+              target="_blank">4B_Uso_Custos_Consumo_Excessivo</a></td>
+          <td>Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base
+            licenciada no período selecionado.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"
+              target="_blank">4B_Uso_Custos_ControlM-TOP-10</a></td>
+          <td>Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência
+            final, e os 10 maiores consumos de cada período.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
+              target="_blank">4B_Uso_Custos_ExtracaoSCRT</a></td>
+          <td>Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por
+            Serial/Produto e detalhado por partição.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
+              target="_blank">4B_Uso_Custos_GestaoOrcamentoContrato</a></td>
+          <td>Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em
+            meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o
+            saldo orçamentário detalhado.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"
+              target="_blank">4B_Uso_Custos_IBM_Detalhado</a></td>
+          <td>Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site
+            (CEPTI) e SID, além de um detalhamento por partição.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"
+              target="_blank">4B_Uso_Custos_Inventario_IBM</a></td>
+          <td>Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período
+            selecionado.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"
+              target="_blank">4B_Uso_Custos_InventarioUso</a></td>
+          <td>Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um
+            gráfico de tendências.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"
+              target="_blank">4B_Uso_Custos_InventarioSoftwareTerceiros</a></td>
+          <td>Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período
+            selecionado.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"
+              target="_blank">4B_Uso_Custos_Inventário_CBA</a></td>
+          <td>Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado
+            por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment
+            ou "Bolsão Flexível), acumulado e detalhados por subset/produto.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"
+              target="_blank">4B_Uso_Custos_Rubricas</a></td>
+          <td>Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o
+            status de pagamento das faturas.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"
+              target="_blank">4B_Uso_Custos_Terceiros</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais
+            vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e
+            por valor.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"
+              target="_blank">4B_Uso_Custos_Terceiros_CA</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+            contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos
+            contratuais, e a distribuição percentual dos produtos por consumo e por valor.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"
+              target="_blank">4B_Uso_Custos_Terceiros_Control-M</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+            contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por
+            produto.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"
+              target="_blank">4B_Uso_Custos_Terceiros_Detalhes</a></td>
+          <td>Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a
+            distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição
+            de consumo e de valor por site (CEPTI).</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"
+              target="_blank">4B_Uso_Custos_Terceiros_Detalhes_Control-M</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados
+            contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição
+            das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"
+              target="_blank">4B_Uso_Custos_Terceiros_FaixasAcumuladas</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais
+            vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e
+            por valor e um quadro demonstrativo do cálculo do valor.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"
+              target="_blank">4B_Uso_Custos_Terceiros_Simulacao_Aquisicao</a></td>
+          <td>Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de
+            realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da
+            diferença entre consumo e base licenciada (MsuBase).</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"
+              target="_blank">4B_Uso_Custos_Valores_Particoes</a></td>
+          <td>Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e
+            Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.</td>
+        </tr>
+      </table>
+    </body>
+  </div>
+
+  <div id="GECTI" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+    <body>
+      <table id="Table">
+        <tr class="header">
+          <th style="width:50%;">Nome</th>
+          <th style="width:50%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://10.221.70.14:7116/saturn/scrt/index.html" target="_blank"> Download dos SCRTs </a></td>
+          <td>Apresenta as pastas dos SCRTs com a seguinte estrutura: AAAA-MM (Ano-Mês) e, dentro destas pastas, as
+            subpastas Container e NoContainer, nas quais estão as planilhas.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/655e4d8f16f60a0e50890962" target="_blank">Consumo
+              Mensal: Control-M – CEGTI</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados
+            contratuais, o dia de maior pico, a distribuição das tasks e do valor por dia, site e ambiente, e a
+            distribuição das tasks por site (CEPTI) com o % de participação. Aplica-se somente aos fornecedores do
+            Control-M.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/655cbac30f29d94700af4cb3" target="_blank">Consumo
+              Mensal: Softwares Não-IBM – CEGTI</a></td>
+          <td>Apresenta, para o período e fornecedor selecionados, o consumo por produto, distribuído por serial, site
+            (CEPTI) e SID. </td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/655e4cae16f60a0e5089094e" target="_blank">Custo
+              Mensal: Control-M – CEGTI</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+            contratuais vigentes, o dia de maior pico de tasks e o detalhamento dos cálculos por produto. Aplica-se
+            somente aos fornecedores do Control-M.</td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/65577876ca29b434303e519b" target="_blank">Custo
+              Mensal: Softwares CA/Broadcom – CEGTI</a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+            contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais e a distribuição do
+            consumo por site (CEPTI), com o percentual de participação. Aplica-se somente ao fornecedor Broadcom CA;
+          </td>
+        </tr>
+        <tr>
+          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/655cb5e70f29d94700af4c91" target="_blank">Custo
+              Mensal: Softwares Não-IBM – CEGT </a></td>
+          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+            contratuais vigentes, o detalhamento dos cálculos por produto e a distribuição do consumo por site (CEPTI),
+            com o percentual de participação. Não se aplica a Broadcom CA e fornecedores Control-M. </td>
+        </tr>
+      </table>
+      <div class="clearfix"></div>
+    </body>
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  };
+
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("Table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  };
+
+  function darkmode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  };
+</script>
