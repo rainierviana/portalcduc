@@ -40,9 +40,11 @@
     </div>
   </div>
   <br>
+
   <div class="tab">
-    <button class="tablinks" onmouseover="openCity(event, 'Custos')">Dashboards de Custos/Uso</button>
     <button class="tablinks" onmouseover="openCity(event, 'GECTI')">CEGTI</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Custos')">Dashboards de Custos/Uso</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Portal')">Portal de Contratos</button>
   </div>
 
   <div id="Custos" class="tabcontent" style="overflow-y: scroll; height:468px;">
@@ -195,6 +197,22 @@
     </body>
   </div>
 
+  <div id="Portal" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+    <body>
+      <table id="Table">
+        <tr class="header">
+          <th style="width:50%;">Nome</th>
+          <th style="width:50%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://10.221.70.14:7116/saturn/index.html"target="_blank">ECCOM</a></td>
+          <td>Apresenta o portal de contratos.</td>
+        </tr>        
+      </table>
+      </body>
+  </div>
+
   <div id="GECTI" class="tabcontent" style="overflow-y: scroll; height:468px;">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
 
@@ -249,6 +267,7 @@
       <div class="clearfix"></div>
     </body>
   </div>
+
 </body>
 
 </html>

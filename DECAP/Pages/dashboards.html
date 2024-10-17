@@ -1,19 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<link rel="icon" href="../favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<title>Portal CDUC | CAIXA</title>
-<link rel="stylesheet" href="../style.css" />
-<!--header-->
-<head>
+  <link rel="icon" href="../favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <meta charset="utf-8">
+  <title>Portal CDUC | CAIXA</title>
+  <link rel="stylesheet" href="../style.css" />
+  <!--header-->
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
 <body>
-<!--sidenav-->
-<div id="mySidenav" class="sidenav">
-  <a href="arquitetura.html">Arquitetura e Topologia</a>
+  <!--sidenav-->
+  <div id="mySidenav" class="sidenav">
+    <a href="arquitetura.html">Arquitetura e Topologia</a>
     <a href="dashboards.html">Dashboards</a>
     <button class="dropdown-btn">Processos</button>
     <div class="dropdown-container">
@@ -29,309 +32,67 @@
     <a href="showback.html">Showback</a>
     <a href="simulacao.html">Simulações e Tendências</a>
     <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
-  <br>
-  <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label><p>Modo Escuro</p></a>
-  <a><picture ><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture></a>
-</div>
+    <br>
+    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+      <p>Modo Escuro</p>
+    </a>
+    <a>
+      <picture><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+    </a>
+  </div>
 
 
-<div id="main">
-  <div class="navbar">
-    <!--<a href="#news">News</a>-->
-    <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-    <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
-      </div>
+  <div id="main">
+    <div class="navbar">
+      <!--<a href="#news">News</a>-->
+      <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
+      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
     </div>
+  </div>
   </div>
   <!--hover tabs-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-</head>
-<body>
-<br>
+  </head>
 
-
-<div class="tab">
-  <button class="tablinks" onmouseover="openCity(event, 'CICS')">CICS</button>
-  <button class="tablinks" onmouseover="openCity(event, 'CPU')">CPU</button>
-  <button class="tablinks" onmouseover="openCity(event, 'DB2')">DB2</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Desempenho')">Desempenho</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Memoria')">Memória</button>
-  <button class="tablinks" onmouseover="openCity(event, 'CESTI23')">CESTI23</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Storage')">Storage</button>
-  <button class="tablinks" onmouseover="openCity(event, 'SUART')">SUART</button>
-  <button class="tablinks" onmouseover="openCity(event, 'SHOWBACKGEGAT')">SHOWBACKGEGAT</button>
-  <button class="tablinks" onmouseover="openCity(event, 'SHOWBACKGESTI')">SHOWBACKGESTI</button>
-  <button class="tablinks" onmouseover="openCity(event, 'DesempenhoAplicação')">Desempenho Aplicação</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Performance')">Performance</button>
-  <button class="tablinks" onmouseover="openCity(event, 'EventosComerciais')">EventosComerciais</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Indicadores')">Indicadores  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Broker')">Broker  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'IDMS')">IDMS  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Inventario')">Inventário  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'MQ')">MQ  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Produção')">Produção  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'TCPIP')">TCPIP  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'WAS')">WAS  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Catálogos')">Catálogos  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'CESTI351')">CESTI351  </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Relatorio')">Relatorio </button>
-  <button class="tablinks" onmouseover="openCity(event, 'Custos')">Custos  </button>
-  
-</div>
-
-
-<div id="CICS" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>CICS</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
   <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:50%;">Nome</th>
-        <th style="width:50%;">Descrição</th>
-      </tr>
- <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83cdce93cf25110a9460d"target="_blank">Activity_TDS</td>
-        <td>Apresentar o perfil de atividade  de CPU dos servidores CICS do ambiente CAIXA.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8318de93cf25110a94528"target="_blank">CPU_Bancario</a></td>
-        <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente Bancário.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8326de93cf25110a94545"target="_blank">CPU_Negocial</a></td>
-        <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente NEGOCIAL.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83affe93cf25110a945f2"target="_blank">CPU_SOCIAL</a></td>
-        <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente Social.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6cf5de93cf25110a940f9"target="_blank">CICS_Activity</a></td>
-        <td>Apresenta as atividades das Regiões CICS na CAIXA.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ce6fe93cf25110a940ca"target="_blank">Report_Eficiencia</a></td>
-        <td>Apresenta a atividade e os índices de eficiência das transações dos últimos 7 dias.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c98ce93cf25110a940b3"target="_blank">TRN_Negocial_CEPTI240</a></td>
-        <td>Acompanhamento de transações Negocial para CEPTI240.</td>
-      </tr>
-    </table>
-    </body>
-</div>
+    <br>
 
-<div id="CPU" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>CPU</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:60%;">Nome</th>
-        <th style="width:40%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d190e93cf25110a94160"target="_blank">CP_Ziip_Capacity</a></td>
-        <td> Apresenta os indicadores de uso de processadores CP e Ziip.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d7173a8acf511c7e9350"target="_blank">CP_Ziip_Capacity_30dias</a></td>
-        <td> Apresenta o consumo de processadores CP e ZIIP nos últimos 30 dias.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6197ade73db4255714fb5dbd"target="_blank">negocio</a></td>
-        <td> Apresenta a evolução de consumo de processamento por Negócio.</td>
-      </tr>
-    </table>
-    </body>
-</div>
 
-<div id="DB2" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>DB2</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:60%;">Nome</th>
-        <th style="width:40%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="cpu.html"target="_blank">CPU</a></td>
-        <td>Apresenta os dashboards de produção/não produção de CPU.</td>
-      </tr>
-      <tr>
-        <td><a href="ddf.html"target="_blank">DDF</a></td>
-        <td>Apresenta os dashboards de produção/não produção de DDF.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"target="_blank">Commits_View</a></td>
-        <td>Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com frequência.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9ad3a8acf511c7e9399"target="_blank">DB2_Commits_View_CEPTI240</a></td>
-        <td>Este relatório traz  programas/rotinas sem COMMIT por sistemas do ambiente negocial.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9e5e93cf25110a941ca"target="_blank">DB2_Connection_Client</a></td>
-        <td>O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras informações relevantes.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"target="_blank">DB2_Tamanho_LOG</a></td>
-        <td>Apresenta os tempos de  carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6de143a8acf511c7e93aa"target="_blank">DB2_Lock_Scalation</a></td>
-        <td>Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/650d7d9078d49728c48ea2de"target="_blank">DB2_Activity_V4</a></td>
-        <td>Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.</td>
-      </tr>
-    </table>      
-    </body>
+    <div class="tab">
+      <button class="tablinks" onmouseover="openCity(event, 'CICS')">CICS</button>
+      <button class="tablinks" onmouseover="openCity(event, 'CPU')">CPU</button>
+      <button class="tablinks" onmouseover="openCity(event, 'DB2')">DB2</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Desempenho')">Desempenho</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Memoria')">Memória</button>
+      <button class="tablinks" onmouseover="openCity(event, 'CESTI23')">CESTI23</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Storage')">Storage</button>
+      <button class="tablinks" onmouseover="openCity(event, 'SUART')">SUART</button>
+      <button class="tablinks" onmouseover="openCity(event, 'SHOWBACKGEGAT')">SHOWBACKGEGAT</button>
+      <button class="tablinks" onmouseover="openCity(event, 'SHOWBACKGESTI')">SHOWBACKGESTI</button>
+      <button class="tablinks" onmouseover="openCity(event, 'DesempenhoAplicação')">Desempenho Aplicação</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Performance')">Performance</button>
+      <button class="tablinks" onmouseover="openCity(event, 'EventosComerciais')">EventosComerciais</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Indicadores')">Indicadores </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Broker')">Broker </button>
+      <button class="tablinks" onmouseover="openCity(event, 'IDMS')">IDMS </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Inventario')">Inventário </button>
+      <button class="tablinks" onmouseover="openCity(event, 'MQ')">MQ </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Produção')">Produção </button>
+      <button class="tablinks" onmouseover="openCity(event, 'TCPIP')">TCPIP </button>
+      <button class="tablinks" onmouseover="openCity(event, 'WAS')">WAS </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Catálogos')">Catálogos </button>
+      <button class="tablinks" onmouseover="openCity(event, 'CESTI351')">CESTI351 </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Relatorio')">Relatorio </button>
+      <button class="tablinks" onmouseover="openCity(event, 'Custos')">Custos </button>
+
     </div>
 
 
-<div id="Desempenho" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>Desempenho</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:60%;">Nome</th>
-        <th style="width:40%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6eaba3a8acf511c7e942f"target="_blank">DESEMPENHO_Cockpit</a></td>
-        <td>Este dashboard demonstra o Consumo em MIPS.  Visualização pela SUART - Tendência de consumo das partições de Produção.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ec883a8acf511c7e9464"target="_blank">DESEMPENHO_WLM_Neogocio</a></td>
-        <td>Apresenta os indicadores de desempenho das classes do WLM.</td>
-      </tr>
-    </table>
-    </body>
-    </div>
-
-
-<div id="Memoria" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <h3>Memória</h3>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-    <body>
-      <table id="Table">
-        <tr class="header">
-          <th style="width:60%;">Nome</th>
-          <th style="width:40%;">Descrição</th>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85737e93cf25110a94733"target="_blank">Memoria_Central</a></td>
-          <td>Apresentar a utilização da memória CENTRAL dos ambientes.</td>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85883e93cf25110a94754"target="_blank">Central_Producao_Diario</a></td>
-          <td>Apresentar a utilização de memória CENTRAL no último dia.</td>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65ef3ea199edb935e4d46fb4"target="_blank">Memoria_Virtual</a></td>
-          <td>Apresentar a utilização de memória VIRTUAL na última semana.</td>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8208ee93cf25110a944ce"target="_blank">Memoria_Central_Producao_Diario</a></td>
-          <td>Apresentar os indicadores de uso de Memória Central do dia anterior.</td>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8223ce93cf25110a944ec"target="_blank">Memoria_Central_Semanal</a></td>
-          <td>Apresentar os indicadores de utilização de memória Central na última semana.</td>
-        </tr>
-        <tr>
-          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82bd93a8acf511c7e96ce"target="_blank">Memoria_Virtual</a></td>
-          <td>Apresentar a evolução do uso de memória Virtual no último trimestre.</td>
-        </tr>
-         </table>
-         </body>
-         </div>
- 
-
-
-<div id="CESTI23" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>CESTI23</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:60%;">Nome</th>
-        <th style="width:40%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69a653a8acf511c7e92b7"target="_blank">CESTI23CP_ZIIP_USO_7dias_</a></td>
-        <td>Apresenta a distribuição de Processadores Ziip e CP no ambiente nos últimos 7 dias.</td>
-      </tr>
-    </table>
-    </body>
-</div>
-
-
-<div id="Storage" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>Storage</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:60%;">Nome</th>
-        <th style="width:40%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02f6169cc0c5130732c3d"target="_blank">Array_Capacity(Back-End)</a></td>
-        <td>Apresentar o consumo dos indicadores do storage (visão Subsistema).</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e7b69cc0c5130732c11"target="_blank">Array_Capacity(Front-End)</a></td>
-        <td>Apresentar o consumo dos indicadores do storage (visão Sistema operacional).</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0320869cc0c5130732cd7"target="_blank">Catalogo_Pelican</a></td>
-        <td>Apresentar o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02fd169cc0c5130732c6c"target="_blank">HisDataset</a></td>
-        <td>Este dashboard mostra a Visualização de Dataset alocaldo em Storage Groups.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0306769cc0c5130732c8b"target="_blank">STORAGE_VTUnitUsage</a></td>
-        <td>Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0332869cc0c5130732d05"target="_blank">STORAGE_MegadaVirada_Storage</a></td>
-        <td>Apresentar o consumo dos ARMAZENAMENTO no evento de mega da virada.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c032ae69cc0c5130732cea"target="_blank">STORAGE_Black_friday_storage</a></td>
-        <td> Apresentar o consumo dos ARMAZENAMENTO no  evento Black Friday.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0318a69cc0c5130732cb4"target="_blank">DESEMPENHO_Performance</a></td>
-        <td>Apresentar os  indicadores de desempenho dos recursos de armazenamento por Array e Storage Group.</td>
-      </tr>
-      <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e1169cc0c5130732bf2"target="_blank">STORAGE_DSNCAT</a></td>
-        <td> Apresentar os arquivos não classificados.</td>
-      </tr>
-      <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02d7d69cc0c5130732bc5"target="_blank">DESEMPENHO_Sistemas</a></td>
-        <td>Apresentar o CUSTO de armazenamento por sistema.</td>
-      </tr>
-      </tr>
-      <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65293de329845c52a01140fd"target="_blank">Performance_FE_Vols</a></td>
-      <td>Apresentar os  indicadores de desempenho dos discos no ambiente Caixa</td>
-      </tr>
-    </table>
-  </body>
-</div>
-    
-    
-    
-    <div id="SUART" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <div id="CICS" class="tabcontent" style="overflow-y: scroll; height:468px;">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
       <body>
         <table id="Table">
           <tr class="header">
@@ -339,492 +100,329 @@
             <th style="width:50%;">Descrição</th>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c033d769cc0c5130732d39"target="_blank">MIPS_NPRD_novo</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83cdce93cf25110a9460d"
+                target="_blank">Activity_TDS</td>
+            <td>Apresentar o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8318de93cf25110a94528"
+                target="_blank">CPU_Bancario</a></td>
+            <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente Bancário.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8326de93cf25110a94545"
+                target="_blank">CPU_Negocial</a></td>
+            <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente NEGOCIAL.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83affe93cf25110a945f2"
+                target="_blank">CPU_SOCIAL</a></td>
+            <td>Apresentar o perfil de consumo de CPU dos servidores CICS do ambiente Social.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6cf5de93cf25110a940f9"
+                target="_blank">CICS_Activity</a></td>
+            <td>Apresenta as atividades das Regiões CICS na CAIXA.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ce6fe93cf25110a940ca"
+                target="_blank">Report_Eficiencia</a></td>
+            <td>Apresenta a atividade e os índices de eficiência das transações dos últimos 7 dias.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c98ce93cf25110a940b3"
+                target="_blank">TRN_Negocial_CEPTI240</a></td>
+            <td>Acompanhamento de transações Negocial para CEPTI240.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="CPU" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d190e93cf25110a94160"
+                target="_blank">CP_Ziip_Capacity</a></td>
+            <td> Apresenta os indicadores de uso de processadores CP e Ziip.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d7173a8acf511c7e9350"
+                target="_blank">CP_Ziip_Capacity_30dias</a></td>
+            <td> Apresenta o consumo de processadores CP e ZIIP nos últimos 30 dias.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6197ade73db4255714fb5dbd"
+                target="_blank">negocio</a></td>
+            <td> Apresenta a evolução de consumo de processamento por Negócio.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="DB2" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="cpu.html" target="_blank">CPU</a></td>
+            <td>Apresenta os dashboards de produção/não produção de CPU.</td>
+          </tr>
+          <tr>
+            <td><a href="ddf.html" target="_blank">DDF</a></td>
+            <td>Apresenta os dashboards de produção/não produção de DDF.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"
+                target="_blank">Commits_View</a></td>
+            <td>Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com
+              frequência.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9ad3a8acf511c7e9399"
+                target="_blank">DB2_Commits_View_CEPTI240</a></td>
+            <td>Este relatório traz programas/rotinas sem COMMIT por sistemas do ambiente negocial.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9e5e93cf25110a941ca"
+                target="_blank">DB2_Connection_Client</a></td>
+            <td>O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras
+              informações relevantes.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"
+                target="_blank">DB2_Tamanho_LOG</a></td>
+            <td>Apresenta os tempos de carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance
+              do banco.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6de143a8acf511c7e93aa"
+                target="_blank">DB2_Lock_Scalation</a></td>
+            <td>Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts
+              de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/650d7d9078d49728c48ea2de"
+                target="_blank">DB2_Activity_V4</a></td>
+            <td>Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem
+              análises sobre os sistemas em uso no banco de dados.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+
+    <div id="Desempenho" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6eaba3a8acf511c7e942f"
+                target="_blank">DESEMPENHO_Cockpit</a></td>
+            <td>Este dashboard demonstra o Consumo em MIPS. Visualização pela SUART - Tendência de consumo das partições
+              de Produção.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ec883a8acf511c7e9464"
+                target="_blank">DESEMPENHO_WLM_Neogocio</a></td>
+            <td>Apresenta os indicadores de desempenho das classes do WLM.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+
+    <div id="Memoria" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85737e93cf25110a94733"
+                target="_blank">Memoria_Central</a></td>
+            <td>Apresentar a utilização da memória CENTRAL dos ambientes.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85883e93cf25110a94754"
+                target="_blank">Central_Producao_Diario</a></td>
+            <td>Apresentar a utilização de memória CENTRAL no último dia.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65ef3ea199edb935e4d46fb4"
+                target="_blank">Memoria_Virtual</a></td>
+            <td>Apresentar a utilização de memória VIRTUAL na última semana.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8208ee93cf25110a944ce"
+                target="_blank">Memoria_Central_Producao_Diario</a></td>
+            <td>Apresentar os indicadores de uso de Memória Central do dia anterior.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8223ce93cf25110a944ec"
+                target="_blank">Memoria_Central_Semanal</a></td>
+            <td>Apresentar os indicadores de utilização de memória Central na última semana.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82bd93a8acf511c7e96ce"
+                target="_blank">Memoria_Virtual</a></td>
+            <td>Apresentar a evolução do uso de memória Virtual no último trimestre.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="CESTI23" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69a653a8acf511c7e92b7"
+                target="_blank">CESTI23CP_ZIIP_USO_7dias_</a></td>
+            <td>Apresenta a distribuição de Processadores Ziip e CP no ambiente nos últimos 7 dias.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="Storage" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+            <th style="width:40%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02f6169cc0c5130732c3d"
+                target="_blank">Array_Capacity(Back-End)</a></td>
+            <td>Apresentar o consumo dos indicadores do storage (visão Subsistema).</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e7b69cc0c5130732c11"
+                target="_blank">Array_Capacity(Front-End)</a></td>
+            <td>Apresentar o consumo dos indicadores do storage (visão Sistema operacional).</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0320869cc0c5130732cd7"
+                target="_blank">Catalogo_Pelican</a></td>
+            <td>Apresentar o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02fd169cc0c5130732c6c"
+                target="_blank">HisDataset</a></td>
+            <td>Este dashboard mostra a Visualização de Dataset alocaldo em Storage Groups.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0306769cc0c5130732c8b"
+                target="_blank">STORAGE_VTUnitUsage</a></td>
+            <td>Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0332869cc0c5130732d05"
+                target="_blank">STORAGE_MegadaVirada_Storage</a></td>
+            <td>Apresentar o consumo dos ARMAZENAMENTO no evento de mega da virada.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c032ae69cc0c5130732cea"
+                target="_blank">STORAGE_Black_friday_storage</a></td>
+            <td> Apresentar o consumo dos ARMAZENAMENTO no evento Black Friday.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0318a69cc0c5130732cb4"
+                target="_blank">DESEMPENHO_Performance</a></td>
+            <td>Apresentar os indicadores de desempenho dos recursos de armazenamento por Array e Storage Group.</td>
+          </tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e1169cc0c5130732bf2"
+              target="_blank">STORAGE_DSNCAT</a></td>
+          <td> Apresentar os arquivos não classificados.</td>
+          </tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02d7d69cc0c5130732bc5"
+              target="_blank">DESEMPENHO_Sistemas</a></td>
+          <td>Apresentar o CUSTO de armazenamento por sistema.</td>
+          </tr>
+          </tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65293de329845c52a01140fd"
+              target="_blank">Performance_FE_Vols</a></td>
+          <td>Apresentar os indicadores de desempenho dos discos no ambiente Caixa</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="SUART" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c033d769cc0c5130732d39"
+                target="_blank">MIPS_NPRD_novo</a></td>
             <td>Apresentar o tendência de consumo de MIPS das partições de não produção.</td>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c034ce69cc0c5130732d6c"target="_blank">MIPS_PRD_novo</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c034ce69cc0c5130732d6c"
+                target="_blank">MIPS_PRD_novo</a></td>
             <td>Apresentar o tendência de consumo de MIPS das partições de produção.</td>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c035af69cc0c5130732dbc"target="_blank">PlanCap_Channel_novo</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c035af69cc0c5130732dbc"
+                target="_blank">PlanCap_Channel_novo</a></td>
             <td>Apresentar o utilização de canais para avaliação de capacidade.</td>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0366c69cc0c5130732de2"target="_blank">PlanejamentoCapacidade_CF</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0366c69cc0c5130732de2"
+                target="_blank">PlanejamentoCapacidade_CF</a></td>
             <td>Apresentar utilização de processadores ICF para avaliação de capacidade.</td>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c037d269cc0c5130732df8"target="_blank">PlanejamentoCapacidade_Channel</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c037d269cc0c5130732df8"
+                target="_blank">PlanejamentoCapacidade_Channel</a></td>
             <td>Apresentar os indicadores de consumo mensal de Canais.</td>
           </tr>
           <tr>
-            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c039d469cc0c5130732e47"target="_blank">PlanejamentoCapacidade_Memoria</a></td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c039d469cc0c5130732e47"
+                target="_blank">PlanejamentoCapacidade_Memoria</a></td>
             <td>Apresentar o tendência de consumo de MEMORIA real e virtual.</td>
           </tr>
         </table>
       </body>
     </div>
-        
-        
-        
-        
-        <div id="SHOWBACKGEGAT" class="tabcontent" style="overflow-y: scroll; height:468px;">
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-          <body>
-            <table id="Table">
-              <tr class="header">
-                <th style="width:50%;">Nome</th>
-                <th style="width:50%;">Descrição</th>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0261769cc0c5130732b32"target="_blank">Baseline_Custos_Visão_Governança_VP</a></td>
-                <td>Apresentar o BASELINE de custos.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c024ab69cc0c5130732ade"target="_blank">RateioShowbackINFRA_visao_ano_mes [REVER]</a></td>
-                <td>Apresentar o showback da GEGAT.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0253f69cc0c5130732b09"target="_blank">RateioShowbackINFRA_visao_ref</a></td>
-                <td>Apresentar o SHOWBACK da GEGAT.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"target="_blank">Showback_Contrato</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"target="_blank">Showback_ContratosRealizado</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"target="_blank">Showback_VisaoGeralContratos</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02cf369cc0c5130732ba8"target="_blank">ShowbackCentroCustoParticao</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-            </table>
-          </body>
-        </div>
-        <div id="SHOWBACKGESTI" class="tabcontent" style="overflow-y: scroll; height:468px;">
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-          <body>
-            <table id="Table">
-              <tr class="header">
-                <th style="width:50%;">Nome</th>
-                <th style="width:50%;">Descrição</th>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"target="_blank">SHOWBACKGESTI_Showback_Contrato</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"target="_blank">SHOWBACKGESTI_Showback_ContratosRealizado</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-              <tr>
-                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"target="_blank">SHOWBACKGESTI_Showback_VisaoGeralContratos</a></td>
-                <td>Apresentar o SHOWBACK da GESTI.</td>
-              </tr>
-            </table>
-            </body>
-            </div>
-    
-            
-            
-            <div id="DesempenhoAplicação" class="tabcontent" style="overflow-y: scroll; height:468px;">
-              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-              <body>
-                <table id="Table">
-                  <tr class="header">
-                    <th style="width:50%;">Nome</th>
-                    <th style="width:50%;">Descrição</th>
-                  </tr>
-                  <tr>
-                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"target="_blank">CICS_Health
-                    </a></td>
-                    <td>Apresenta os indicadores de saúde das transações e regiões CICS.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"target="_blank">CICS_Health_SUDEA_SUDEB
-                    </a></td>
-                    <td>Apresenta  os indicadores de saúde das transações e regiões CICS do ambiente de Não-Produção.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6268293d23e8370414b736a0"target="_blank">CICS_Report_Desempenho
-                    </a></td>
-                    <td>Apresenta  os indicadores de desempenho e saúde das transações e regiões CICS dos ambientes de Negocio.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bece65f5d03803154f04f"target="_blank">DB2_Commits_View_Desempenho
-                    </a></td>
-                    <td> Apresentar a incidência de Commits para indicar aplicações a serem melhoradas.</td>
-                  </tr>
-                </table>
-              </body>
-            </div>
-                
-                
-                <div id="Performance" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                  <body>
-                    <table id="Table">
-                      <tr class="header">
-                        <th style="width:50%;">Nome</th>
-                        <th style="width:50%;">Descrição</th>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae38c3a8acf511c7e98fa"target="_blank">CP_Ziip_CEC
-                        </a></td>
-                        <td>Apresentar a utilização de processadores CP e Ziip por CEC.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae7d2e93cf25110a949f7"target="_blank">Health_CPU_ZIIP</a></td>
-                        <td>Apresentar a avaliação da saúde dos processadores CP e Ziiip.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad254e93cf25110a94980"target="_blank">MSU_LPAR_DIASEMANA</a></td>
-                        <td>Apresentar o consumo de MSU por LPAR nos dias da semana.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad2afe93cf25110a94997"target="_blank">MSU_SYSPLEX_DIASEMANA</a></td>
-                        <td>Apresentar o consumo de MSU máximo por LPAR nos dias da semana.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae9dde93cf25110a94a26"target="_blank">RMF_Consolidado</a></td>
-                        <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por dia.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baeb21e93cf25110a94a47"target="_blank">RMF_Consolidado_Mensal</a></td>
-                        <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por MÊS.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baebfce93cf25110a94a5e"target="_blank">RMF_Consolidado_Semanal</a></td>
-                        <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por SEMANA.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baec8fe93cf25110a94a75"target="_blank">Storage_Performance</a></td>
-                        <td>Apresentar as informações de DESEMPENHO do armazenamento MAINFRAME.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad84ee93cf25110a949b7"target="_blank">WLM_CPU_ZIIP</a></td>
-                        <td>Apresentar o consumo de MSU por WORKLOAD para CP e Ziip.</td>
-                      </tr>
-                      <tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae0a23a8acf511c7e98c2"target="_blank">Workload_IOs</a></td>
-                        <td>Apresentar o consumo de IOs por WORKLOAD.</td>
-                      </tr><tr>
-                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae2603a8acf511c7e98e2"target="_blank">Workload_Memória</a></td>
-                        <td>Apresentar o consumo de MEMORIA  por WORKLOAD.
-                        </td>
-                      </tr>
-                      <tr>
-                    </table>
-                  </body>
-                </div>
-                    
-                    
-                    <div id="EventosComerciais" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                      <body>
-                        <table id="Table">
-                          <tr class="header">
-                            <th style="width:50%;">Nome</th>
-                            <th style="width:50%;">Descrição</th>
-                          </tr>
-                          <tr>
-                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b801d5e93cf25110a942aa"target="_blank">Black_Friday_View
-                            </a></td>
-                            <td> Apresenta a evolução de consumo de processamento para a semana do Black Friday.</td>
-                          </tr>
-                          <tr>
-                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d4ee3a8acf511c7e9328"target="_blank">CP_Ziip_Capacity_Namorados</a></td>
-                            <td>Apresenta o uso de processadores CP e ZIIP para o dia dos Namorados. </td>
-                          </tr>
-                          <tr>
-                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b7ffe3e93cf25110a94280"target="_blank">Black_Friday_Perf_Track
-                            </a></td>
-                            <td>Apresenta a evolução de consumo de processamento CP e Ziip de Black Friday.</td>
-                          </tr>
-                        </table>
-                      </body>
-                    </div>
-                       
-                                
-                        <div id="Indicadores" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                          <body>
-                            <table id="Table">
-                              <tr class="header">
-                                <th style="width:50%;">Nome</th>
-                                <th style="width:50%;">Descrição</th>
-                              </tr>
-                              <tr>
-                                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81dfee93cf25110a944a3"target="_blank">Disponibilidade_MF (syslog)
-                                </a></td>
-                                <td>Apresentar o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do SYSLOG.</td>
-                              </tr>
-                              <tr>
-                                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81ce9e93cf25110a9447f"target="_blank">Disponibilidade_Mainframe_Jes2
-                                </a></td>
-                                <td>Apresentar o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do JES2.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64dce388e93cf25110a99a02"target="_blank">EficienciaMF_Transacoes_MSU
-                                </a></td>
-                                <td>Este relatório tem por objetivo apresentar o Indicador de Eficiência Plataforma Mainframe (EP_MF) a ser utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia. 
-                                </td>
-                              </tr>
-                            </table>
-                          </body>
-                        </div>
-                           
-                           
-                            <div id="Broker" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                              <body>
-                                <table id="Table">
-                                  <tr class="header">
-                                    <th style="width:50%;">Nome</th>
-                                    <th style="width:50%;">Descrição</th>
-                                  </tr>
-                                   <tr>
-                                    <td><a href="broker-prod.html"target="_blank">CPU PRODUÇÃO/NÃO PRODUÇÃO
-                                    </a></td>
-                                    <td>Apresenta os dashboards de produção/não produção.</td>
-                                  </tr>
-                                  
-                                </table>
-                              </body>
-                            </div>
 
 
-
-                                <div id="IDMS" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                  <body>
-                                    <table id="Table">
-                                      <tr class="header">
-                                        <th style="width:50%;">Nome</th>
-                                        <th style="width:50%;">Descrição</th>
-                                      </tr>
-                                      <tr>
-                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b848d3e93cf25110a946ab"target="_blank">CPU
-                                        </a></td>
-                                        <td> Apresentar o perfil de consumo de CPU dos servidores IDMS por Núcleo.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b846cde93cf25110a9468b"target="_blank">Serviços
-                                        </a></td>
-                                        <td>Apresentar o uso dos servidores IDMS.
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </body>
-                                </div>
-
-
-
-                                    <div id="Inventario" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                      <body>
-                                        <table id="Table">
-                                          <tr class="header">
-                                            <th style="width:50%;">Nome</th>
-                                            <th style="width:50%;">Descrição</th>
-                                          </tr>
-                                          <tr>
-                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84d3ee93cf25110a946d0"target="_blank">CEC_Canais
-                                            </a></td>
-                                            <td>Apresentar o inventário das placas de IO dos CECS instalados e disponíveis para uso.</td>
-                                          </tr>
-                                          <tr>
-                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84f65e93cf25110a946e1"target="_blank">CEC_LPAR
-                                            </a></td>
-                                            <td>Apresentar o inventário dos processadores e componentes dos CECS instalados e disponíveis para uso.</td>
-                                          </tr>
-                                          <tr>
-                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b850cde93cf25110a946fa"target="_blank">CEC_Totais
-                                            </a></td>
-                                            <td>Apresentar o inventário dos CECS instalados e sua capacidade por Negocio e disponíveis para uso.</td>
-                                          </tr>
-                                          <tr>
-                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85213e93cf25110a94709"target="_blank">Software
-                                            </a></td>
-                                            <td>Apresentar o inventário dos produtos e estruturas CF ativos e em uso nos ambientes.</td>
-                                          </tr>
-                                          <tr>
-                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bedfe5f5d03803154f0cc"target="_blank">VTUnitUsage
-                                            </a></td>
-                                            <td>Apresentar o inventário da utilização de unidades de Virtual Tapes.</td>
-                                          </tr>
-                                        </table>
-                                      </body>
-                                    </div>
-                                       
-                                       
-                                       
-                                       
-                                        <div id="MQ" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                          <body>
-                                            <table id="Table">
-                                              <tr class="header">
-                                                <th style="width:50%;">Nome</th>
-                                                <th style="width:50%;">Descrição</th>
-                                              </tr>
-                                              <tr>
-                                                <td><a href="mq-prod.html"target="_blank">CPU</a></td>
-                                                <td>Apresenta os dashboards de produção/não produção.</td>
-                                              </tr>
-                                              <tr>
-                                                <td><a href="mq-mensg.html"target="_blank">MQ MENSAGENS</a></td>
-                                                <td>Apresenta os dashboards de produção/não produção.</td>
-                                              </tr>
-                                            </table>
-                                          </body>
-                                        </div>
-
-
-                                            <div id="Produção" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                              <body>
-                                                <table id="Table">
-                                                  <tr class="header">
-                                                    <th style="width:50%;">Nome</th>
-                                                    <th style="width:50%;">Descrição</th>
-                                                  </tr>
-                                                  <tr>
-                                                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baf00fe93cf25110a94a9b"target="_blank">USO_PRODUCAO_Batch_Producao_Sistemas</a></td>
-                                                    <td>Apresentar as informações de SERVIÇOS BATCH de produção por Sistema.
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0163e3a8acf511c7e9de1"target="_blank">Maiores_Consumidores</a></td>
-                                                    <td>Apresentar o USO dos maiores consumidores por CEC.
-                                                    </td>
-                                                  </tr>
-                                                </table>
-                                              </body>
-                                            </div>
-                                              
-                                              
-                                              
-                                                <div id="Catálogos" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                                  <body>
-                                                    <table id="Table">
-                                                      <tr class="header">
-                                                        <th style="width:50%;">Nome</th>
-                                                        <th style="width:50%;">Descrição</th>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69465e93cf25110a93b5e"target="_blank">NaoCategGegat</a>
-                                                        </td>
-                                                        <td>Apresenta os serviços não categorizados para a GEGAT e seus valores.</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694b4e93cf25110a93b6c"target="_blank">RecursosPrincipal</a>
-                                                        </td>
-                                                        <td>Este catálogo é referente aos recursos físicos do mainframe: Processadores, Memória, Canais e Armazenamento.</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694f2e93cf25110a93b97"target="_blank">RecursosProcessadores</a>
-                                                        </td>
-                                                        <td>Apresenta a visão do consumo dos tempos de CPU dos últimos 6 meses.
-                                                        </td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64908e9ffba25c28f02ca7dd"target="_blank">Serviços_Online</a></td>
-                                                        <td>Apresenta os critérios e classificação dos serviços ONLINE nos últimos 6 meses.</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/60dccd93c03b104fb05e59a4"target="_blank">Catálgo rotinas batch</a></td>
-                                                        <td>Apresenta os critérios de classificação das Rotinas Batchs.</td>
-                                                      </tr>
-                                                    </table>
-                                                  </body>
-                                                </div>
-
-                                                    <div id="WAS" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                                      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                                      <body>
-                                                        <table id="Table">
-                                                          <tr class="header">
-                                                            <th style="width:50%;">Nome</th>
-                                                            <th style="width:50%;">Descrição</th>
-                                                          </tr>
-                                                          <tr>
-                                                            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"target="_blank">CPU</a></td>
-                                                            <td>Apresentar o consumo dos serviços WAS por SYSPLEX.</td>
-                                                          </tr>
-                                                        </table>
-                                                      </body>
-                                                    </div>
-                                                        
-                                                        
-                                                        <div id="TCPIP" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                                          <body>
-                                                            <table id="Table">
-                                                              <tr class="header">
-                                                                <th style="width:50%;">Nome</th>
-                                                                <th style="width:50%;">Descrição</th>
-                                                              </tr>
-                                                              <tr>
-                                                                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"target="_blank">CPU</a></td>
-                                                                <td>Apresentar o consumo dos serviços TCPIP por SYSPLEX.
-                                                                </td>
-                                                              </tr>
-                                                            </table>
-                                                          </body>
-                                                        </div>
-
-                                                        <div id="CESTI351" class="tabcontent" style="overflow-y: scroll; height:468px;">
-                                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-                                                          <body>
-                                                            <table id="Table">
-                                                              <tr class="header">
-                                                                <th style="width:50%;">Nome</th>
-                                                                <th style="width:50%;">Descrição</th>
-                                                              </tr>
-                                                              <tr>
-                                                                <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c5b9e93cf25110a93c07"target="_blank">Consumo_Geral_RJP1eRJP2</a></td>
-                                                                <td>Apresenta a evolução do consumo de processador da RJP1 e RJP2.</td>
-                                                              </tr>
-                                                            </table>       
-                                                            </body>
-                                                        </div>
-                                                        <div id="Relatorio" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
-    <table id="Table">
-      <tr class="header">
-        <th style="width:50%;">Nome</th>
-        <th style="width:50%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6144943318844b39646300d1"target="_blank">Relatorio_Diario</a></td>
-        <td>Apresentar os pontos de alertas, saturações e críticos que ocorreram no dia ANTERIOR, dos quais necessitam de atenção.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/614b38446c783551bca318da"target="_blank">Relatorio_Mensal</a></td>
-        <td>Apresentar de uma forma sistêmica a saúde do ambiente de produção Alta Plataforma e os pontos de alertas e críticos que ocorreram durante o MÊS ANTERIOR dos quais necessitam de atenção. Utiliza o mês de Julho/2021 como baseline. Por fim, o relatório traz sempre os últimos 3 meses com o intuito de um pequeno histórico para comparações..</td>
-      </tr>
-       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6176edd009be97484cfd1617"target="_blank">Relatorio_Semanal</a></td>
-        <td>Apresentar os pontos de alertas, saturações e críticos que ocorreram durante a semana ANTERIOR, dos quais necessitam de atenção..</td>
-      </tr>
-    </table>
-    </body>
-    </div>
-   <div id="Custos" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <div id="SHOWBACKGEGAT" class="tabcontent" style="overflow-y: scroll; height:468px;">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
       <body>
         <table id="Table">
           <tr class="header">
@@ -832,165 +430,710 @@
             <th style="width:50%;">Descrição</th>
           </tr>
           <tr>
-            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"target="_blank">4B_Uso_Custos_AcompanhamentoContratoSoftware</a></td>
-            <td>Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0261769cc0c5130732b32"
+                target="_blank">Baseline_Custos_Visão_Governança_VP</a></td>
+            <td>Apresentar o BASELINE de custos.</td>
           </tr>
           <tr>
-            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"target="_blank">4B_Uso_Custos_Consumo-Control-M</a></td>
-            <td>Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c024ab69cc0c5130732ade"
+                target="_blank">RateioShowbackINFRA_visao_ano_mes [REVER]</a></td>
+            <td>Apresentar o showback da GEGAT.</td>
           </tr>
           <tr>
-            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"target="_blank">4B_Uso_Custos_Consumo_Excessivo</a></td>
-            <td>Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0253f69cc0c5130732b09"
+                target="_blank">RateioShowbackINFRA_visao_ref</a></td>
+            <td>Apresentar o SHOWBACK da GEGAT.</td>
           </tr>
           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"target="_blank">4B_Uso_Custos_ControlM-TOP-10</a></td>
-          <td>Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"target="_blank">4B_Uso_Custos_ExtracaoSCRT</a></td>
-          <td>Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
+                target="_blank">Showback_Contrato</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
           </tr>
           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"target="_blank">4B_Uso_Custos_GestaoOrcamentoContrato</a></td>
-          <td>Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
+                target="_blank">Showback_ContratosRealizado</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
           </tr>
           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b"target="_blank">4B_Uso_Custos_IBM</a></td>
-          <td>Apresenta o uso e o custo total dos softwares IBM no período selecionado, com visões por produto, e por licença, subset e produto.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
+                target="_blank">Showback_VisaoGeralContratos</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
           </tr>
           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"target="_blank">4B_Uso_Custos_IBM_Detalhado</a></td>
-          <td>Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"target="_blank">4B_Uso_Custos_Inventario_IBM</a></td>
-          <td>Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"target="_blank">4B_Uso_Custos_InventarioUso</a></td>
-          <td>Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"target="_blank">4B_Uso_Custos_InventarioSoftwareTerceiros</a></td>
-          <td>Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"target="_blank">4B_Uso_Custos_Inventário_CBA</a></td>
-          <td>Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou "Bolsão Flexível), acumulado e detalhados por subset/produto.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"target="_blank">4B_Uso_Custos_Rubricas</a></td>
-          <td>Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"target="_blank">4B_Uso_Custos_Terceiros</a></td>
-          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"target="_blank">4B_Uso_Custos_Terceiros_CA</a></td>
-          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"target="_blank">4B_Uso_Custos_Terceiros_Control-M</a></td>
-          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.</td>
-          </tr>
-           <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"target="_blank">4B_Uso_Custos_Terceiros_Detalhes</a></td>
-          <td>Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"target="_blank">4B_Uso_Custos_Terceiros_Detalhes_Control-M</a></td>
-          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"target="_blank">4B_Uso_Custos_Terceiros_FaixasAcumuladas</a></td>
-          <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"target="_blank">4B_Uso_Custos_Terceiros_Simulacao_Aquisicao</a></td>
-          <td>Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).</td>
-          </tr>
-          <tr>
-          <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"target="_blank">4B_Uso_Custos_Valores_Particoes</a></td>
-          <td>Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.</td>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02cf369cc0c5130732ba8"
+                target="_blank">ShowbackCentroCustoParticao</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
           </tr>
         </table>
-        </body>
-        </div>
+      </body>
+    </div>
+    <div id="SHOWBACKGESTI" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
+                target="_blank">SHOWBACKGESTI_Showback_Contrato</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
+                target="_blank">SHOWBACKGESTI_Showback_ContratosRealizado</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
+                target="_blank">SHOWBACKGESTI_Showback_VisaoGeralContratos</a></td>
+            <td>Apresentar o SHOWBACK da GESTI.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="DesempenhoAplicação" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
+                target="_blank">CICS_Health
+              </a></td>
+            <td>Apresenta os indicadores de saúde das transações e regiões CICS.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
+                target="_blank">CICS_Health_SUDEA_SUDEB
+              </a></td>
+            <td>Apresenta os indicadores de saúde das transações e regiões CICS do ambiente de Não-Produção.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6268293d23e8370414b736a0"
+                target="_blank">CICS_Report_Desempenho
+              </a></td>
+            <td>Apresenta os indicadores de desempenho e saúde das transações e regiões CICS dos ambientes de Negocio.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bece65f5d03803154f04f"
+                target="_blank">DB2_Commits_View_Desempenho
+              </a></td>
+            <td> Apresentar a incidência de Commits para indicar aplicações a serem melhoradas.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
 
 
-                                                      
+    <div id="Performance" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae38c3a8acf511c7e98fa"
+                target="_blank">CP_Ziip_CEC
+              </a></td>
+            <td>Apresentar a utilização de processadores CP e Ziip por CEC.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae7d2e93cf25110a949f7"
+                target="_blank">Health_CPU_ZIIP</a></td>
+            <td>Apresentar a avaliação da saúde dos processadores CP e Ziiip.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad254e93cf25110a94980"
+                target="_blank">MSU_LPAR_DIASEMANA</a></td>
+            <td>Apresentar o consumo de MSU por LPAR nos dias da semana.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad2afe93cf25110a94997"
+                target="_blank">MSU_SYSPLEX_DIASEMANA</a></td>
+            <td>Apresentar o consumo de MSU máximo por LPAR nos dias da semana.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae9dde93cf25110a94a26"
+                target="_blank">RMF_Consolidado</a></td>
+            <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por dia.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baeb21e93cf25110a94a47"
+                target="_blank">RMF_Consolidado_Mensal</a></td>
+            <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por MÊS.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baebfce93cf25110a94a5e"
+                target="_blank">RMF_Consolidado_Semanal</a></td>
+            <td>Apresentar as informações de RMF de uso de CP e ZIIP consolidado por SEMANA.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baec8fe93cf25110a94a75"
+                target="_blank">Storage_Performance</a></td>
+            <td>Apresentar as informações de DESEMPENHO do armazenamento MAINFRAME.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad84ee93cf25110a949b7"
+                target="_blank">WLM_CPU_ZIIP</a></td>
+            <td>Apresentar o consumo de MSU por WORKLOAD para CP e Ziip.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae0a23a8acf511c7e98c2"
+                target="_blank">Workload_IOs</a></td>
+            <td>Apresentar o consumo de IOs por WORKLOAD.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae2603a8acf511c7e98e2"
+                target="_blank">Workload_Memória</a></td>
+            <td>Apresentar o consumo de MEMORIA  por WORKLOAD.
+            </td>
+          </tr>
+          <tr>
+        </table>
+    </div>
+
+
+    <div id="EventosComerciais" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b801d5e93cf25110a942aa"
+                target="_blank">Black_Friday_View
+              </a></td>
+            <td> Apresenta a evolução de consumo de processamento para a semana do Black Friday.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d4ee3a8acf511c7e9328"
+                target="_blank">CP_Ziip_Capacity_Namorados</a></td>
+            <td>Apresenta o uso de processadores CP e ZIIP para o dia dos Namorados. </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b7ffe3e93cf25110a94280"
+                target="_blank">Black_Friday_Perf_Track
+              </a></td>
+            <td>Apresenta a evolução de consumo de processamento CP e Ziip de Black Friday.</td>
+          </tr>
+        </table>
+    </div>
+
+    <div id="Indicadores" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81dfee93cf25110a944a3"
+                target="_blank">Disponibilidade_MF (syslog)
+              </a></td>
+            <td>Apresentar o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do
+              SYSLOG.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81ce9e93cf25110a9447f"
+                target="_blank">Disponibilidade_Mainframe_Jes2
+              </a></td>
+            <td>Apresentar o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do
+              JES2.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64dce388e93cf25110a99a02"
+                target="_blank">EficienciaMF_Transacoes_MSU
+              </a></td>
+            <td>Este relatório tem por objetivo apresentar o Indicador de Eficiência Plataforma Mainframe (EP_MF) a ser
+              utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o
+              total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia.
+            </td>
+          </tr>
+        </table>
+    </div>
+
+    <div id="Broker" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="broker-prod.html" target="_blank">CPU PRODUÇÃO/NÃO PRODUÇÃO
+              </a></td>
+            <td>Apresenta os dashboards de produção/não produção.</td>
+          </tr>
+        </table>
+    </div>
+
+    <div id="IDMS" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b848d3e93cf25110a946ab"
+                target="_blank">CPU
+              </a></td>
+            <td> Apresentar o perfil de consumo de CPU dos servidores IDMS por Núcleo.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b846cde93cf25110a9468b"
+                target="_blank">Serviços
+              </a></td>
+            <td>Apresentar o uso dos servidores IDMS.
+            </td>
+          </tr>
+        </table>
+    </div>
+
+    <div id="Inventario" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84d3ee93cf25110a946d0"
+                target="_blank">CEC_Canais
+              </a></td>
+            <td>Apresentar o inventário das placas de IO dos CECS instalados e disponíveis para uso.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84f65e93cf25110a946e1"
+                target="_blank">CEC_LPAR
+              </a></td>
+            <td>Apresentar o inventário dos processadores e componentes dos CECS instalados e disponíveis para uso.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b850cde93cf25110a946fa"
+                target="_blank">CEC_Totais
+              </a></td>
+            <td>Apresentar o inventário dos CECS instalados e sua capacidade por Negocio e disponíveis para uso.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85213e93cf25110a94709"
+                target="_blank">Software
+              </a></td>
+            <td>Apresentar o inventário dos produtos e estruturas CF ativos e em uso nos ambientes.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bedfe5f5d03803154f0cc"
+                target="_blank">VTUnitUsage
+              </a></td>
+            <td>Apresentar o inventário da utilização de unidades de Virtual Tapes.</td>
+          </tr>
+        </table>
+    </div>
+
+    <div id="MQ" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="mq-prod.html" target="_blank">CPU</a></td>
+            <td>Apresenta os dashboards de produção/não produção.</td>
+          </tr>
+          <tr>
+            <td><a href="mq-mensg.html" target="_blank">MQ MENSAGENS</a></td>
+            <td>Apresenta os dashboards de produção/não produção.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="Produção" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baf00fe93cf25110a94a9b"
+                target="_blank">USO_PRODUCAO_Batch_Producao_Sistemas</a></td>
+            <td>Apresentar as informações de SERVIÇOS BATCH de produção por Sistema.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0163e3a8acf511c7e9de1"
+                target="_blank">Maiores_Consumidores</a></td>
+            <td>Apresentar o USO dos maiores consumidores por CEC.
+            </td>
+          </tr>
+        </table>
+      </body>
+    </div>
 
 
 
+    <div id="Catálogos" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
 
-<div class="clearfix"></div>
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69465e93cf25110a93b5e"
+                target="_blank">NaoCategGegat</a>
+            </td>
+            <td>Apresenta os serviços não categorizados para a GEGAT e seus valores.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694b4e93cf25110a93b6c"
+                target="_blank">RecursosPrincipal</a>
+            </td>
+            <td>Este catálogo é referente aos recursos físicos do mainframe: Processadores, Memória, Canais e
+              Armazenamento.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694f2e93cf25110a93b97"
+                target="_blank">RecursosProcessadores</a>
+            </td>
+            <td>Apresenta a visão do consumo dos tempos de CPU dos últimos 6 meses.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64908e9ffba25c28f02ca7dd"
+                target="_blank">Serviços_Online</a></td>
+            <td>Apresenta os critérios e classificação dos serviços ONLINE nos últimos 6 meses.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/60dccd93c03b104fb05e59a4"
+                target="_blank">Catálgo rotinas batch</a></td>
+            <td>Apresenta os critérios de classificação das Rotinas Batchs.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="WAS" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
+                target="_blank">CPU</a></td>
+            <td>Apresentar o consumo dos serviços WAS por SYSPLEX.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
 
 
-<script>
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  </script>
-  </div>
-  <!--search bar-->
-  <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("Table");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
-    }
-    </script>
-  
-  <!--dark mode function-->
-  
-  <script>
-  function darkmode() {
-     var element = document.body;
-     element.classList.toggle("dark-mode");
-  }
-  </script>
-  
-  <script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-    
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
+    <div id="TCPIP" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
+                target="_blank">CPU</a></td>
+            <td>Apresentar o consumo dos serviços TCPIP por SYSPLEX.
+            </td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div id="CESTI351" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c5b9e93cf25110a93c07"
+                target="_blank">Consumo_Geral_RJP1eRJP2</a></td>
+            <td>Apresenta a evolução do consumo de processador da RJP1 e RJP2.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+    <div id="Relatorio" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6144943318844b39646300d1"
+                target="_blank">Relatorio_Diario</a></td>
+            <td>Apresentar os pontos de alertas, saturações e críticos que ocorreram no dia ANTERIOR, dos quais
+              necessitam de atenção.</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/614b38446c783551bca318da"
+                target="_blank">Relatorio_Mensal</a></td>
+            <td>Apresentar de uma forma sistêmica a saúde do ambiente de produção Alta Plataforma e os pontos de alertas
+              e críticos que ocorreram durante o MÊS ANTERIOR dos quais necessitam de atenção. Utiliza o mês de
+              Julho/2021 como baseline. Por fim, o relatório traz sempre os últimos 3 meses com o intuito de um pequeno
+              histórico para comparações..</td>
+          </tr>
+          <tr>
+            <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6176edd009be97484cfd1617"
+                target="_blank">Relatorio_Semanal</a></td>
+            <td>Apresentar os pontos de alertas, saturações e críticos que ocorreram durante a semana ANTERIOR, dos
+              quais necessitam de atenção..</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+    <div id="Custos" class="tabcontent" style="overflow-y: scroll; height:468px;">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
+
+      <body>
+        <table id="Table">
+          <tr class="header">
+            <th style="width:50%;">Nome</th>
+            <th style="width:50%;">Descrição</th>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"
+                target="_blank">4B_Uso_Custos_AcompanhamentoContratoSoftware</a></td>
+            <td>Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento
+              orçamentário.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"
+                target="_blank">4B_Uso_Custos_Consumo-Control-M</a></td>
+            <td>Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e
+              ambiente, e a distribuição do consumo por site com o % de contribuição.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"
+                target="_blank">4B_Uso_Custos_Consumo_Excessivo</a></td>
+            <td>Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base
+              licenciada no período selecionado.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"
+                target="_blank">4B_Uso_Custos_ControlM-TOP-10</a></td>
+            <td>Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência
+              final, e os 10 maiores consumos de cada período.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
+                target="_blank">4B_Uso_Custos_ExtracaoSCRT</a></td>
+            <td>Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por
+              Serial/Produto e detalhado por partição.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
+                target="_blank">4B_Uso_Custos_GestaoOrcamentoContrato</a></td>
+            <td>Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo
+              em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado
+              e o saldo orçamentário detalhado.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b"
+                target="_blank">4B_Uso_Custos_IBM</a></td>
+            <td>Apresenta o uso e o custo total dos softwares IBM no período selecionado, com visões por produto, e por
+              licença, subset e produto.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"
+                target="_blank">4B_Uso_Custos_IBM_Detalhado</a></td>
+            <td>Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site
+              (CEPTI) e SID, além de um detalhamento por partição.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"
+                target="_blank">4B_Uso_Custos_Inventario_IBM</a></td>
+            <td>Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período
+              selecionado.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"
+                target="_blank">4B_Uso_Custos_InventarioUso</a></td>
+            <td>Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um
+              gráfico de tendências.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"
+                target="_blank">4B_Uso_Custos_InventarioSoftwareTerceiros</a></td>
+            <td>Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período
+              selecionado.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"
+                target="_blank">4B_Uso_Custos_Inventário_CBA</a></td>
+            <td>Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado
+              por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment
+              ou "Bolsão Flexível), acumulado e detalhados por subset/produto.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"
+                target="_blank">4B_Uso_Custos_Rubricas</a></td>
+            <td>Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o
+              status de pagamento das faturas.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"
+                target="_blank">4B_Uso_Custos_Terceiros</a></td>
+            <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais
+              vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e
+              por valor.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"
+                target="_blank">4B_Uso_Custos_Terceiros_CA</a></td>
+            <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+              contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e
+              créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"
+                target="_blank">4B_Uso_Custos_Terceiros_Control-M</a></td>
+            <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados
+              contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por
+              produto.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"
+                target="_blank">4B_Uso_Custos_Terceiros_Detalhes</a></td>
+            <td>Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a
+              distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição
+              de consumo e de valor por site (CEPTI).</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"
+                target="_blank">4B_Uso_Custos_Terceiros_Detalhes_Control-M</a></td>
+            <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados
+              contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição
+              das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"
+                target="_blank">4B_Uso_Custos_Terceiros_FaixasAcumuladas</a></td>
+            <td>Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais
+              vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e
+              por valor e um quadro demonstrativo do cálculo do valor.</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"
+                target="_blank">4B_Uso_Custos_Terceiros_Simulacao_Aquisicao</a></td>
+            <td>Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de
+              realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média
+              da diferença entre consumo e base licenciada (MsuBase).</td>
+          </tr>
+          <tr>
+            <td><a href="https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"
+                target="_blank">4B_Uso_Custos_Valores_Particoes</a></td>
+            <td>Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site
+              e Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.</td>
+          </tr>
+        </table>
+      </body>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
         }
-      });
-    }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
     </script>
-</body>
+    </div>
+    <!--search bar-->
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("Table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+
+    <!--dark mode function-->
+
+    <script>
+      function darkmode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+
 </html>
