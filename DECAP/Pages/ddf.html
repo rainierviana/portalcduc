@@ -1,202 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <link rel="icon" href="../favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portal CDUC | CAIXA</title>
-  <link rel="stylesheet" href="../style.css" />
-  <!--header-->
-
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
 
 <body>
-
-
-  <!--sidenav-->
-
-
   <div id="mySidenav" class="sidenav">
     <a href="arquitetura.html">Arquitetura e Topologia</a>
     <a href="dashboards.html">Dashboards</a>
     <button class="dropdown-btn">Processos</button>
     <div class="dropdown-container">
       <a href="capacidades.html">Capacidade</a>
-      <a href="custos.html">Custos</a>
+      <a href="custos-subitem.html">Custos</a>
       <a href="desempenho.html">Desempenho</a>
       <a href="uso.html">Uso</a>
     </div>
     <a href="documentação.html">Documentação</a>
     <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="Custos2.html">Custos</a>
+    <a href="custos.html">Custos</a>
     <a href="performance.html">Performance</a>
     <a href="showback.html">Showback</a>
     <a href="simulacao.html">Simulações e Tendências</a>
     <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
     <br>
-    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+    <a>
+      <label class="switch">
+        <input type="checkbox" onclick="darkmode()">
+        <span class="slider round"></span>
+      </label>
       <p>Modo Escuro</p>
     </a>
     <a>
-      <picture><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+      <picture>
+        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
+      </picture>
     </a>
   </div>
 
   <div id="main">
     <div class="navbar">
-      <!--<a href="#news">News</a>-->
       <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
+      <a class="split"><img src="../assets/images/9176.png" height="40"></a>
     </div>
-  </div>
-  </div>
-  <!--hover tabs-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  </head>
-
-  <body>
-    <br>
-
-
+    <br />
     <div class="tab">
-      <button class="tablinks" onmouseover="openCity(event, 'DDFpro')">DDF PRODUÇÃO</button>
-      <button class="tablinks" onmouseover="openCity(event, 'DDFnpro')">DDF NÃO PRODUÇÃO</button>
+      <button class="tablinks" onmouseover="openTab(event, 'DDFpro')">DDF PRODUÇÃO</button>
+      <button class="tablinks" onmouseover="openTab(event, 'DDFnpro')">DDF NÃO PRODUÇÃO</button>
     </div>
-
 
     <div id="DDFpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-      <h3>CICS</h3>
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-
-      <body>
-        <table id="Table">
-          <tr class="header">
-            <th style="width:50%;">Nome</th>
-            <th style="width:50%;">Descrição</th>
-          </tr>
-          <tr>
-            <td><a
-                href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522da2863e7f0110edee3b?folder=635be8fe5f5d03803154ee9d"
-                target="_blank">DDF_BANCARIO_PROD</a></td>
-            <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
-          </tr>
-          <tr>
-            <td><a
-                href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d72863e7f0110ededc4?folder=635be8fe5f5d03803154ee9d"
-                target="_blank">DDF_NEGOCIAL_PROD</a></td>
-            <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
-          </tr>
-          <tr>
-            <td><a
-                href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d8e863e7f0110ededff?folder=635be8fe5f5d03803154ee9d"
-                target="_blank">DDF_SOCIAL_PROD</a></td>
-            <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
-          </tr>
-        </table>
-      </body>
+      <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
+      <table id="Table">
+        <tr class="header">
+          <th style="width:50%;">Nome</th>
+          <th style="width:50%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522da2863e7f0110edee3b?folder=635be8fe5f5d03803154ee9d" target="_blank">DDF_BANCARIO_PROD</a></td>
+          <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d72863e7f0110ededc4?folder=635be8fe5f5d03803154ee9d" target="_blank">DDF_NEGOCIAL_PROD</a></td>
+          <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d8e863e7f0110ededff?folder=635be8fe5f5d03803154ee9d" target="_blank">DDF_SOCIAL_PROD</a></td>
+          <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
+        </tr>
+      </table>
     </div>
-
 
     <div id="DDFnpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-      <h3>CPU</h3>
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-
-      <body>
-        <table id="Table">
-          <tr class="header">
-            <th style="width:60%;">Nome</th>
-            <th style="width:40%;">Descrição</th>
-          </tr>
-          <tr>
-            <td><a
-                href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d96863e7f0110edee1d?folder=635be8fe5f5d03803154ee9d"
-                target="_blank">DDF_BANCARIO_NAO_PROD</a></td>
-            <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
-          </tr>
-          <tr>
-            <td><a
-                href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d6a863e7f0110ededa6?folder=635be8fe5f5d03803154ee9d"
-                target="_blank">DDF_NEGOCIAL_NAO_PROD</a></td>
-            <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
-          </tr>
-        </table>
-      </body>
+      <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
+      <table id="Table">
+        <tr class="header">
+          <th style="width:60%;">Nome</th>
+          <th style="width:40%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d96863e7f0110edee1d?folder=635be8fe5f5d03803154ee9d" target="_blank">DDF_BANCARIO_NAO_PROD</a></td>
+          <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d6a863e7f0110ededa6?folder=635be8fe5f5d03803154ee9d" target="_blank">DDF_NEGOCIAL_NAO_PROD</a></td>
+          <td>Apresentar o perfil de consumo de CPU das transações DDF nas instâncias DB2.</td>
+        </tr>
+      </table>
     </div>
+  </div>
 
+  <div class="clearfix"></div>
 
-
-    <div class="clearfix"></div>
-
-
-    <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-    </script>
-    </div>
-    <!--search bar-->
-    <script>
-      function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("Table");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
-    <!--dark mode function-->
-
-    <script>
-      function darkmode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-    </script>
-
-    <script>
-      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-      var dropdown = document.getElementsByClassName("dropdown-btn");
-      var i;
-
-      for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-          } else {
-            dropdownContent.style.display = "block";
-          }
-        });
-      }
-    </script>
-  </body>
+  <script src="../assets/scripts/script.js"></script>
+</body>
 
 </html>

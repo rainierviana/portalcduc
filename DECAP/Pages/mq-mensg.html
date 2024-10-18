@@ -1,186 +1,113 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<link rel="icon" href="../favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<title>Portal CDUC | CAIXA</title>
-<link rel="stylesheet" href="../style.css" />
-<!--header-->
-<head>
+  <link rel="icon" href="../favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Portal CDUC | CAIXA</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
+
 <body>
-
-
-<!--sidenav-->
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="arquitetura.html">Arquitetura e Topologia</a>
+  <div id="mySidenav" class="sidenav">
+    <a href="arquitetura.html">Arquitetura e Topologia</a>
     <a href="dashboards.html">Dashboards</a>
     <button class="dropdown-btn">Processos</button>
     <div class="dropdown-container">
       <a href="capacidades.html">Capacidade</a>
-      <a href="custos.html">Custos</a>
+      <a href="custos-subitem.html">Custos</a>
       <a href="desempenho.html">Desempenho</a>
       <a href="uso.html">Uso</a>
     </div>
     <a href="documentação.html">Documentação</a>
     <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="Custos2.html">Custos</a>
+    <a href="custos.html">Custos</a>
     <a href="performance.html">Performance</a>
     <a href="showback.html">Showback</a>
     <a href="simulacao.html">Simulações e Tendências</a>
     <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
-  <br>
-  <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label><p>Modo Escuro</p></a>
-  <a><picture ><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture></a>
-</div>
+    <br>
+    <a>
+      <label class="switch">
+        <input type="checkbox" onclick="darkmode()">
+        <span class="slider round"></span>
+      </label>
+      <p>Modo Escuro</p>
+    </a>
+    <a>
+      <picture>
+        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
+      </picture>
+    </a>
+  </div>
 
-
-<div id="main">
-  <div class="navbar">
-    <!--<a href="#news">News</a>-->
-    <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-    <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
-      </div>
+  <div id="main">
+    <div class="navbar">
+      <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
+      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
     </div>
   </div>
-  <!--hover tabs-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <br />
+  <div class="tab">
+    <button class="tablinks" onmouseover="openTab(event, 'MQmpro')">MQ MENSAGENS PRODUÇÃO</button>
+    <button class="tablinks" onmouseover="openTab(event, 'MQmnpro')">MQ MENSAGENS NÃO PRODUÇÃO</button>
+  </div>
 
-
-</head>
-<body>
-<br>
-
-
-<div class="tab">
-   <button class="tablinks" onmouseover="openCity(event, 'MQmpro')">MQ MENSAGENS PRODUÇÃO</button>
-  <button class="tablinks" onmouseover="openCity(event, 'MQmnpro')">MQ MENSAGENS NÃO PRODUÇÃO</button>
-</div>
-
-
-
-<div id="MQmpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>MQ</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
+  <div id="MQmpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
     <table id="Table">
       <tr class="header">
         <th style="width:50%;">Nome</th>
         <th style="width:50%;">Descrição</th>
       </tr>
-       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b794eb61ec26ec53b744"target="_blank">MENSAGENS_BANCARIO_PROD </a></td>
+      <tr>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b794eb61ec26ec53b744"
+            target="_blank">MENSAGENS_BANCARIO_PROD </a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
       </tr>
       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981a187c0ad2422c942589"target="_blank">MENSAGENS_NEGOCIAL_PROD</a></td>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981a187c0ad2422c942589"
+            target="_blank">MENSAGENS_NEGOCIAL_PROD</a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
       </tr>
       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981b88e65a714de833cbad"target="_blank">MENSAGENS_SOCIAL_PROD</a></td>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981b88e65a714de833cbad"
+            target="_blank">MENSAGENS_SOCIAL_PROD</a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
       </tr>
     </table>
-    </body>
-    </div>
+  </div>
 
-<div id="MQmnpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-  <h3>CICS</h3>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-  <body>
+  <div id="MQmnpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
     <table id="Table">
       <tr class="header">
         <th style="width:50%;">Nome</th>
         <th style="width:50%;">Descrição</th>
       </tr>
-       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6598188c7c0ad2422c942561"target="_blank">MENSAGENS_BANCARIO_NÃO_PROD </a></td>
+      <tr>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6598188c7c0ad2422c942561"
+            target="_blank">MENSAGENS_BANCARIO_NÃO_PROD </a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
       </tr>
       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981ae27c0ad2422c9425d9"target="_blank">MENSAGENS_NEGOCIAL_NÃO_PROD</a></td>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981ae27c0ad2422c9425d9"
+            target="_blank">MENSAGENS_NEGOCIAL_NÃO_PROD</a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
       </tr>
       <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981c4ee65a714de833cbd4"target="_blank">MENSAGENS_SOCIAL_NÃO_PROD</a></td>
+        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981c4ee65a714de833cbd4"
+            target="_blank">MENSAGENS_SOCIAL_NÃO_PROD</a></td>
         <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
       </tr>
     </table>
-    </body>
-    </div>
-                                                    
 
-
-<div class="clearfix"></div>
-
-
-<script>
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  </script>
   </div>
-  <!--search bar-->
-  <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("Table");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
-    }
-    </script>
-  
-  <!--dark mode function-->
-  
-  <script>
-  function darkmode() {
-     var element = document.body;
-     element.classList.toggle("dark-mode");
-  }
-  </script>
-  
-  <script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-    
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
-        }
-      });
-    }
-    </script>
+
+  <div class="clearfix"></div>
+
+  <script src="../assets/scripts/script.js"></script>
 </body>
+
 </html>

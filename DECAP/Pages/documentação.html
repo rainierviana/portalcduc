@@ -1,197 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <link rel="icon" href="../favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portal CDUC | CAIXA</title>
+  <link rel="icon" href="../favicon.ico">
   <link rel="stylesheet" href="../style.css" />
-  <!--header-->
-
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+</head>
 
 <body>
-
-  <!--sidenav-->
-
   <div id="mySidenav" class="sidenav">
     <a href="arquitetura.html">Arquitetura e Topologia</a>
     <a href="dashboards.html">Dashboards</a>
     <button class="dropdown-btn">Processos</button>
     <div class="dropdown-container">
       <a href="capacidades.html">Capacidade</a>
-      <a href="custos.html">Custos</a>
+      <a href="custos-subitem.html">Custos</a>
       <a href="desempenho.html">Desempenho</a>
       <a href="uso.html">Uso</a>
     </div>
     <a href="documentação.html">Documentação</a>
     <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="Custos2.html">Custos</a>
+    <a href="custos.html">Custos</a>
     <a href="performance.html">Performance</a>
     <a href="showback.html">Showback</a>
     <a href="simulacao.html">Simulações e Tendências</a>
     <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
     <br>
-    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+    <a>
+      <label class="switch">
+        <input type="checkbox" onclick="darkmode()">
+        <span class="slider round"></span>
+      </label>
       <p>Modo Escuro</p>
     </a>
     <a>
-      <picture><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+      <picture>
+        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
+      </picture>
     </a>
   </div>
 
   <div id="main">
     <div class="navbar">
-      <!--<a href="#news">News</a>-->
       <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
+      <a class="split"><img src="../assets/images/9176.png" height="40"></a>
     </div>
-  </div>
-  </div>
-  <!--hover tabs-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-
-  <body>
-    <br>
-
+    <br />
     <div class="tab">
-      <button class="tablinks" onmouseover="openCity(event, 'manuais')">Manuais, Documentações e Boletim</button>
+      <button class="tablinks" onmouseover="openTab(event, 'manuais')">Manuais, Documentações e Boletim</button>
     </div>
-
 
     <div id="manuais" class="tabcontent" style="overflow-y: scroll; height:468px;">
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-
-      <body>
-        <table id="Table">
-          <tr class="header">
-            <th style="width:50%;">Nome</th>
-            <th style="width:50%;">Descrição</th>
-          </tr>
-          <tr>
-            <td><a
-                href="https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460"
-                target="_blank">Manuais e treinamentos</a></td>
-            <td>Apresenta toda a documentação de dashboards, manuais e treinamentos.</td>
-          </tr>
-          <tr>
-            <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Boletim%20dirio/Forms/AllItems.aspx"
-                target="_blank">Boletim Diário</td>
-            <td>Apresenta toda a documentação de Boletim Diário.</td>
-          </tr>
-          <tr>
-            <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Boletim%20Mensal/Forms/AllItems.aspx"
-                target="_blank">Boletim Mensal</td>
-            <td>Apresenta toda a documentação de Boletim Mensal.</td>
-          </tr>
-          <tr>
-            <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20Dirio/Forms/AllItems.aspx"
-                target="_blank">Relatório Diário</td>
-            <td>Apresenta toda a documentação de Relatório Diário.</td>
-          </tr>
-          <tr>
-            <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20semanal/Forms/AllItems.aspx"
-                target="_blank">Relatório Semanal</td>
-            <td>Apresenta toda a documentação de Relatório Semanal.</td>
-          </tr>
-          <tr>
-            <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20mensal/Forms/AllItems.aspx"
-                target="_blank">Relatório Mensal</td>
-            <td>Apresenta toda a documentação de Relatório Mensal.</td>
-          </tr>
-          <tr>
-            <td><a
-                href="https://caixa.sharepoint.com/sites/CETAD10/Relatrios%20capacidade/Forms/AllItems.aspx?id=%2Fsites%2FCETAD10%2FRelatrios%20capacidade%2FRel%20Armazenamento%20Mainframe%2FEventos%20Relevantes&viewid=a404d207%2D11af%2D47a9%2D9751%2D3b6c8a3d5ac5"
-                target="_blank">Eventos Relevantes</td>
-            <td>Apresenta toda a documentação de Eventos Relevantes.</td>
-          </tr>
-        </table>
-
-
-      </body>
+      <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
+      <table id="Table">
+        <tr class="header">
+          <th style="width:50%;">Nome</th>
+          <th style="width:50%;">Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460" target="_blank">Manuais e treinamentos</a></td>
+          <td>Apresenta toda a documentação de dashboards, manuais e treinamentos.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Boletim%20dirio/Forms/AllItems.aspx" target="_blank">Boletim Diário</a></td>
+          <td>Apresenta toda a documentação de Boletim Diário.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Boletim%20Mensal/Forms/AllItems.aspx" target="_blank">Boletim Mensal</a></td>
+          <td>Apresenta toda a documentação de Boletim Mensal.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20Dirio/Forms/AllItems.aspx" target="_blank">Relatório Diário</a></td>
+          <td>Apresenta toda a documentação de Relatório Diário.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20semanal/Forms/AllItems.aspx" target="_blank">Relatório Semanal</a></td>
+          <td>Apresenta toda a documentação de Relatório Semanal.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20mensal/Forms/AllItems.aspx" target="_blank">Relatório Mensal</a></td>
+          <td>Apresenta toda a documentação de Relatório Mensal.</td>
+        </tr>
+        <tr>
+          <td><a href="https://caixa.sharepoint.com/sites/CETAD10/Relatrios%20capacidade/Forms/AllItems.aspx?id=%2Fsites%2FCETAD10%2FRelatrios%20capacidade%2FRel%20Armazenamento%20Mainframe%2FEventos%20Relevantes&viewid=a404d207%2D11af%2D47a9%2D9751%2D3b6c8a3d5ac5" target="_blank">Eventos Relevantes</a></td>
+          <td>Apresenta toda a documentação de Eventos Relevantes.</td>
+        </tr>
+      </table>
     </div>
-
-  </body>
-
-
   </div>
-</body>
 
-</div>
+  <div class="clearfix"></div>
 
+  <script src="../assets/scripts/script.js"></script>
 
-
-<div class="clearfix"></div>
-
-<script>
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-</script>
-</div>
-<!--search bar-->
-<script>
-  function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("Table");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-</script>
-
-<!--dark mode function-->
-
-<script>
-  function darkmode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
-</script>
-
-<script>
-  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-  var dropdown = document.getElementsByClassName("dropdown-btn");
-  var i;
-
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
-</script>
 </body>
 
 </html>

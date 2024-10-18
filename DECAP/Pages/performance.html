@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<link rel="icon" href="../favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="stylesheet" href="../style.css" />
-<title>Portal CDUC | CAIXA</title>
+
+<head>
+  <link rel="icon" href="../favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Portal CDUC | CAIXA</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
 <body>
   <div id="mySidenav" class="sidenav">
@@ -13,112 +16,64 @@
     <button class="dropdown-btn">Processos</button>
     <div class="dropdown-container">
       <a href="capacidades.html">Capacidade</a>
-      <a href="custos.html">Custos</a>
+      <a href="custos-subitem.html">Custos</a>
       <a href="desempenho.html">Desempenho</a>
       <a href="uso.html">Uso</a>
     </div>
     <a href="documentação.html">Documentação</a>
     <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="Custos2.html">Custos</a>
+    <a href="custos.html">Custos</a>
     <a href="performance.html">Performance</a>
     <a href="showback.html">Showback</a>
     <a href="simulacao.html">Simulações e Tendências</a>
     <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
     <br>
-    <a><label class="switch"><input type="checkbox" onclick="darkmode()"><span class="slider round"></span></label>
+    <a>
+      <label class="switch">
+        <input type="checkbox" onclick="darkmode()">
+        <span class="slider round"></span>
+      </label>
       <p>Modo Escuro</p>
     </a>
     <a>
-      <picture><img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;"></picture>
+      <picture>
+        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
+      </picture>
     </a>
   </div>
+
   <div id="main">
     <div class="navbar">
       <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
       <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
     </div>
   </div>
+  <br />
   <div class="tab">
-    <button class="tablinks" onmouseover="openCity(event, 'arquitetura')">Performance</button>
+    <button class="tablinks" onmouseover="openTab(event, 'arquitetura')">Performance</button>
   </div>
+
   <div id="arquitetura" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-
-    <body>
-      <table id="Table">
-        <tr class="header">
-          <th style="width:50%;">Nome</th>
-          <th style="width:50%;">Descrição</th>
-        </tr>
-        <tr>
-          <td><a href="http://10.221.70.14:7117/aurora/index.html"target="_blank">ECAPP</a></td>
-          <td>Acesso ao Portal ECAPP</td>
-        </tr>
-      </table>
-    </body>
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
+    <table id="Table">
+      <tr class="header">
+        <th style="width:50%;">Nome</th>
+        <th style="width:50%;">Descrição</th>
+      </tr>
+      <tr>
+        <td><a href="http://10.221.70.14:7117/aurora/index.html" target="_blank">ECAPP</a></td>
+        <td>Acesso ao Portal ECAPP</td>
+      </tr>
+    </table>
   </div>
+
   <div id="topologia" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar..." title="Type in a name">
-
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
   </div>
+
   <div class="clearfix"></div>
+
+  <script src="../assets/scripts/script.js"></script>
 </body>
-</div>
 
 </html>
-
-<script>
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  };
-
-  function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("Table");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  };
-
-  function darkmode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  };
-
-  var dropdown = document.getElementsByClassName("dropdown-btn");
-  var i;
-
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
-
-</script>
