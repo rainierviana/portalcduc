@@ -27,11 +27,6 @@ function search() {
     }
 };
 
-function darkmode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-};
-
 var dropdown = document.getElementsByClassName("dropdown-btn");
 for (var i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function () {
