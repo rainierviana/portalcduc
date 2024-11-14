@@ -37,24 +37,22 @@ body {
 .dropdown {
 	float: left;
 	overflow: hidden;
-	color: #ffffff;
 }
 
 .dropdown .dropbtn {
 	font-size: 16px;
 	border: none;
 	outline: none;
-	color: rgb(255, 255, 255);
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
+	
 }
 
 .dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: rgba(0, 102, 179);
-	color: rgb(255, 255, 255);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
@@ -62,11 +60,11 @@ body {
 
 .dropdown-content a {
 	float: none;
-	color: black;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 	text-align: left;
+	color: rgb(255, 255, 255);
 }
 
 .dropdown-content a:hover {
@@ -118,117 +116,12 @@ a:active {
 	text-decoration: underline;
 }
 
-/*dark mode switck */
-
-.switch {
-	position: relative;
-	display: inline-block;
-	width: 50px;
-	height: 24px;
+.selectedItem{
+	color: rgb(247, 148, 30);
 }
 
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #c0c0c0;
-	-webkit-transition: 0.4s;
-	transition: 0.5s;
-	padding-right: 30px;
-}
-
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 16px;
-	width: 16px;
-	left: 4px;
-	bottom: 4px;
-	background-color: rgb(255, 255, 255);
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-}
-
-input:checked + .slider {
-	background-color: rgb(247, 148, 30);
-}
-
-input:focus + .slider {
-	box-shadow: 0 0 1px #000000;
-}
-
-input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-	border-radius: 34px;
-	padding-right: 30px;
-}
-
-.slider.round:before {
-	border-radius: 50%;
-}
-
-/*dark mode setup*/
-.dark-mode {
-	background: linear-gradient(
-		60deg,
-		rgb(19, 54, 125) 60%,
-		rgb(2, 67, 127) 100%
-	);
-	margin: 0;
-	padding: 0;
-	background-size: auto;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-left: 250px;
-	/*dark mode table*/
-
-	.tabcontent {
-		float: left;
-		padding: 16px 16px 16px 16px;
-		background-color: rgba(0, 0, 0, 0.6);
-		color: #ffffff;
-		background-size: 200px;
-		width: 70%;
-		height: 200px;
-		display: none;
-		transition: 0.5s;
-	}
-
-	#myInput {
-		background-image: url(../Images/Search_darkmode.png);
-		background-color: #272727;
-		color: #ffffff;
-		background-position: 10px 10px;
-		background-size: 22px;
-		background-repeat: no-repeat;
-		width: 100%;
-		font-size: 16px;
-		padding: 12px 20px 12px 40px;
-		border: 1px solid #000000;
-		margin-bottom: 12px;
-	}
-
-	#Table tr.header,
-	#Table tr:hover {
-		background-color: #3f3f3f;
-		transition: 0.5s;
-	}
+.notSelectedItem{
+	color: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -240,9 +133,21 @@ input:checked + .slider:before {
 .navbar a {
 	float: left;
 	font-size: 16px;
-	color: white;
+	color: rgb(255, 255, 255);
 	text-align: center;
 	padding: 14px 16px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 3px solid transparent;
+}
+
+.navbar a.split {
+	float: right;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	text-decoration: none;
 	display: block;
 	border-bottom: 3px solid transparent;
@@ -256,18 +161,6 @@ input:checked + .slider:before {
 
 .sticky + .content {
 	padding-top: 60px;
-}
-
-.navbar a.split {
-	float: right;
-	font-size: 16px;
-	color: white;
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	text-decoration: none;
-	display: block;
-	border-bottom: 3px solid transparent;
 }
 
 #Table {
@@ -293,8 +186,7 @@ input:checked + .slider:before {
 	border-bottom: transparent;
 }
 
-#Table tr.header,
-#Table tr:hover {
+#Table tr.header, #Table tr:hover {
 	background-color: #f1f1f1;
 }
 
@@ -332,7 +224,6 @@ body {
 	padding: 12px 8px 8px 25px;
 	text-decoration: none;
 	font-size: 17px;
-	color: #ffffff;
 	display: block;
 	border: none;
 	background: none;
@@ -341,40 +232,29 @@ body {
 	cursor: pointer;
 	outline: none;
 	transition: 0.5s;
+	color: rgb(255, 255, 255);
 }
 
-.sidenav p {
-	padding: 1px 1px 1px 1px;
-	text-decoration: none;
-	font-size: 17px;
-	color: #ffffff;
-	display: block;
-	transition: 0.5s;
-}
-
-/* On mouse-over */
 .sidenav a:hover,
 .dropdown-btn:hover {
 	color: rgb(247, 148, 30);
 }
 
-/* Main content */
+.sidenav a{
+	color: rgb(255, 255, 255);
+}
+
 .main {
 	margin-left: 200px;
-	/* Same as the width of the sidenav */
 	font-size: 20px;
-	/* Increased text to enable scrolling */
 	padding: 0px 10px;
 }
 
-/* Add an active class to the active dropdown button */
 .active {
 	background-color: transparent;
-	color: white;
 	transition: 0.5s;
 }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
 	display: none;
 	background-color: rgb(0, 102, 179, 0.4);
@@ -382,7 +262,6 @@ body {
 	transition: 0.5s;
 }
 
-/* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
 	.sidenav {
 		padding-top: 15px;
@@ -399,7 +278,6 @@ body {
 	box-sizing: border-box;
 }
 
-/* tab style */
 .tab {
 	float: left;
 	background-color: transparent;
@@ -436,13 +314,11 @@ body {
 	transition: 0.3s;
 }
 
-/*active/current "tab button" class */
 .tab button.active {
 	color: rgb(0, 102, 179);
-	background-color: #ffffff;
+	background-color: rgb(255, 255, 255);
 }
 
-/*tab content style*/
 .tabcontent {
 	float: left;
 	padding: 16px 16px 16px 16px;
@@ -465,22 +341,3 @@ body {
 	clear: both;
 	display: table;
 }
-
-.button {
-	background-color: rgb(255, 255, 255);
-	color: rgb(0, 79, 159);
-	padding: 16px;
-	font-size: 16px;
-	border: black;
-	border-radius: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-.button:hover {
-	background-color: rgb(247, 148, 30);
-	color: rgb(255, 255, 255);
-}
-
