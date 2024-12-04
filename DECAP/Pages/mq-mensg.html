@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <link rel="icon" href="../favicon.ico">
@@ -10,97 +10,93 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="arquitetura.html">Arquitetura e Topologia</a>
-    <a href="dashboards.html">Dashboards</a>
-    <button class="dropdown-btn">Processos</button>
-    <div class="dropdown-container">
-      <a href="capacidades.html">Capacidade</a>
-      <a href="custos-subitem.html">Custos</a>
-      <a href="desempenho.html">Desempenho</a>
-      <a href="uso.html">Uso</a>
-    </div>
-    <a href="documentacao.html">Documentação</a>
-    <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="custos.html">Custos</a>
-    <a href="performance.html">Performance</a>
-    <a href="showback.html">Showback</a>
-    <a href="simulacao.html">Simulações e Tendências</a>
-    <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
-    <br>
-    <a>
-      <picture>
-        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
-      </picture>
-    </a>
-  </div>
+  <header class="header">
+    <a href="../index.html" class="homeButton"><button class="homeButton"><img src="../assets/images/Menu_Icons/Home.svg" alt="Home" /></button></a>
+		<div class="logo"><img src="../assets/images/CAIXA_volume_negativa.png" alt="Logo CAIXA" /></div>
+		<a class="pageTitle">Portal CDUC</a>
+		<div class="split"><img src="../assets/images/9176.png" alt="Logo 4Bears" /></div>
+    <input type="text" id="input" onkeyup="search()" placeholder="Pesquisar" title="Type in a name" class="searchbar">
+  </header>
 
-  <div id="main">
-    <div class="navbar">
-      <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
+  <div class="sidenav">
+    <a class="notSelectedItem" href="../pages/arquitetura.html"><img src="../assets/images/Menu_Icons/Arquitetura.svg" alt="Arquitetura" class="menuIcons">Arquitetura e Topologia</a>
+    <a class="notSelectedItem" href="../pages/dashboards.html"><img src="../assets/images/Menu_Icons/Dashboards.svg" alt="Dashboards" class="menuIcons">Dashboards</a>
+    <button class="dropdown-btn"><img src="../assets/images/Menu_Icons/Processos.svg" alt="Processos" class="menuIcons">Processos</button>
+    <div class="dropdown-container">
+      <a class="notSelectedItem" href="../pages/capacidades.html">Capacidade</a>
+      <a class="notSelectedItem" href="../pages/custos-subitem.html">Custos</a>
+      <a class="notSelectedItem" href="../pages/desempenho.html">Desempenho</a>
+      <a class="notSelectedItem" href="../pages/uso.html">Uso</a>
     </div>
+    <a class="notSelectedItem" href="../pages/documentacao.html"><img src="../assets/images/Menu_Icons/Documentacao.svg" alt="Documentação" class="menuIcons">Documentação</a>
+    <a class="notSelectedItem" href="../pages/balanceador.html"><img src="../assets/images/Menu_Icons/Balanceador.svg" alt="Balanceador" class="menuIcons">Balanceador dinâmico</a>
+    <a class="notSelectedItem" href="../pages/custos.html"><img src="../assets/images/Menu_Icons/Custos.svg" alt="Custos" class="menuIcons">Custos</a>
+    <a class="notSelectedItem" href="../pages/performance.html"><img src="../assets/images/Menu_Icons/Performance.svg" alt="Performance" class="menuIcons">Performance</a>
+    <a class="notSelectedItem" href="../pages/showback.html"><img src="../assets/images/Menu_Icons/Showback.svg" alt="Showback" class="menuIcons">Showback</a>
+    <a class="notSelectedItem" href="../pages/simulacao.html"><img src="../assets/images/Menu_Icons/Simulacao.svg" alt="Simulações" class="menuIcons">Simulações e Tendências</a>
+    <a class="notSelectedItem" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank" rel="noopener"><img src="../assets/images/Menu_Icons/X_Caixa.svg" alt="Caixa" class="menuIcons" />CESTI35</a>
   </div>
   <br />
-  <div class="tab">
-    <button class="tablinks" onmouseover="openTab(event, 'MQmpro')">MQ MENSAGENS PRODUÇÃO</button>
-    <button class="tablinks" onmouseover="openTab(event, 'MQmnpro')">MQ MENSAGENS NÃO PRODUÇÃO</button>
-  </div>
 
-  <div id="MQmpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
-    <table id="Table">
-      <tr class="header">
-        <th style="width:50%;">Nome</th>
-        <th style="width:50%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b794eb61ec26ec53b744"
-            target="_blank">MENSAGENS_BANCARIO_PROD </a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981a187c0ad2422c942589"
-            target="_blank">MENSAGENS_NEGOCIAL_PROD</a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981b88e65a714de833cbad"
-            target="_blank">MENSAGENS_SOCIAL_PROD</a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
-      </tr>
-    </table>
-  </div>
+  <div class="content">
+    <div class="tab">
+      <button class="tablinks" onmouseover="tabContent(event, 'MQmpro')">MQ Mensagens PRODUÇÃO</button>
+      <button class="tablinks" onmouseover="tabContent(event, 'MQmnpro')">MQ Mensagens NÃO PRODUÇÃO</button>
+    </div>
 
-  <div id="MQmnpro" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
-    <table id="Table">
-      <tr class="header">
-        <th style="width:50%;">Nome</th>
-        <th style="width:50%;">Descrição</th>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6598188c7c0ad2422c942561"
-            target="_blank">MENSAGENS_BANCARIO_NÃO_PROD </a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981ae27c0ad2422c9425d9"
-            target="_blank">MENSAGENS_NEGOCIAL_NÃO_PROD</a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
-      </tr>
-      <tr>
-        <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981c4ee65a714de833cbd4"
-            target="_blank">MENSAGENS_SOCIAL_NÃO_PROD</a></td>
-        <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
-      </tr>
-    </table>
+    <div id="MQmpro" class="tabcontent">
+      <table id="Table">
+        <tr class="tableHeader">
+          <th>Nome</th>
+          <th>Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b794eb61ec26ec53b744"
+              target="_blank" rel="noopener">Mensagens Bancário Prod. </a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981a187c0ad2422c942589"
+              target="_blank" rel="noopener">Mensagens Negocial Prod.</a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981b88e65a714de833cbad"
+              target="_blank" rel="noopener">Mensagens Social Prod.</a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
+        </tr>
+      </table>
+    </div>
 
-  </div>
+    <div id="MQmnpro" class="tabcontent">
+      <table id="Table">
+        <tr class="tableHeader">
+          <th>Nome</th>
+          <th>Descrição</th>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6598188c7c0ad2422c942561"
+              target="_blank" rel="noopener">Mensagens Bancário NÃO_Prod. </a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981ae27c0ad2422c9425d9"
+              target="_blank" rel="noopener">Mensagens Negocial NÃO Prod.</a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes</td>
+        </tr>
+        <tr>
+          <td><a href="http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981c4ee65a714de833cbd4"
+              target="_blank" rel="noopener">Mensagens Social NÃO_Prod.</a></td>
+          <td>Apresentar o consumo dos servidores MQ nos ambientes.</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="clearfix"></div>
 
-  <div class="clearfix"></div>
+    <footer class="footer"></footer>
 
-  <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/script.js"></script>
 </body>
 
 </html>

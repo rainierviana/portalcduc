@@ -1,4 +1,4 @@
-function openTab(evt, cityName) {
+function tabContent(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -13,19 +13,27 @@ function openTab(evt, cityName) {
 };
 
 function search() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("Table");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            tr[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+    const input = document.getElementById('input');
+    const filter = input.value.toLowerCase();
+    const tables = document.querySelectorAll('.tabcontent table');
+  
+    tables.forEach(table => {
+      const rows = table.getElementsByTagName('tr');
+      for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        let isVisible = false;
+        const cells = row.getElementsByTagName('td');
+        for (const cell of cells) {
+          if (cell.textContent.toLowerCase().includes(filter)) {
+            isVisible = true;
+            break;
+          }
         }
-    }
-};
+        row.style.display = isVisible ? '' : 'none';
+      }
+    });
+  }
+
 
 var dropdown = document.getElementsByClassName("dropdown-btn");
 for (var i = 0; i < dropdown.length; i++) {

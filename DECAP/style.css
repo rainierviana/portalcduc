@@ -1,139 +1,43 @@
-h1 {
-	color: #ffffff;
+@font-face {
+	font-family: 'Futura';
+	src: url('./assets/font/FuturaLT.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
-h3 {
-	color: #ffffff;
-}
-
-h4 {
-	color: #ffffff;
-
-	margin-left: 200px;
-
-	margin-right: 200px;
+@font-face {
+	font-family: 'Futura-Bold';
+	src: url('./assets/font/FuturaLT-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-	background: linear-gradient(60deg,rgb(0, 79, 159) 60%,rgb(0, 151, 215) 100%);
+	background-color: rgb(220, 220, 220);
 	margin: 0;
 	padding: 0;
+	height: auto;
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-left: 250px;
-	transition: 1s;
+	font-family: 'Futura', sans-serif;	
+	overflow-y: hidden;
 }
 
-.text {
-	padding-left: 25px;
-	padding-right: 25px;
-	color: #ffffff;
-}
-
-/*dropdown*/
-
-.dropdown {
-	float: left;
+.header {
 	overflow: hidden;
-}
-
-.dropdown .dropbtn {
-	font-size: 16px;
-	border: none;
-	outline: none;
-	background-color: inherit;
-	font-family: inherit;
 	margin: 0;
-	
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: rgba(0, 102, 179);
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-.dropdown-content a {
-	float: none;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
-	color: rgb(255, 255, 255);
-}
-
-.dropdown-content a:hover {
-	background-color: rgb(247, 148, 30);
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-/*search bar*/
-
-#myInput {
-	background-image: url(../Images/Search.png);
-	background-position: 10px 10px;
-	background-size: 22px;
-	background-repeat: no-repeat;
+	height: 8%;
 	width: 100%;
-	font-size: 16px;
-	padding: 12px 20px 12px 40px;
-	border: 1px solid #ddd;
-	margin-bottom: 12px;
-	transition: 0.5s;
+	background-color: rgb(0, 79, 159);
+	img{
+		height: 22px;
+	}
 }
 
-/* Link appearance */
-
-a:link {
-	color: rgb(0, 102, 179);
-	background-color: transparent;
-	text-decoration: none;
-}
-
-a:visited {
-	color: rgb(0, 102, 179);
-	background-color: transparent;
-	text-decoration: none;
-}
-
-a:hover {
-	color: rgb(0, 102, 179);
-	background-color: transparent;
-	text-decoration: underline;
-}
-
-a:active {
-	color: rgb(0, 102, 179);
-	background-color: transparent;
-	text-decoration: underline;
-}
-
-.selectedItem{
-	color: rgb(247, 148, 30);
-}
-
-.notSelectedItem{
-	color: rgb(255, 255, 255);
-}
-
-.navbar {
-	overflow: hidden;
-	margin: 0;
-	background-color: rgba(255, 255, 255, 0.15);
-}
-
-.navbar a {
+.header a {
 	float: left;
 	font-size: 16px;
-	color: rgb(255, 255, 255);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -141,27 +45,135 @@ a:active {
 	border-bottom: 3px solid transparent;
 }
 
-.navbar a.split {
+.logo{
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 3px solid transparent;
+}
+
+.header a.split {
 	float: right;
 	font-size: 16px;
-	color: white;
+	color: rgb(255, 255, 255);
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	text-decoration: none;
 	display: block;
 	border-bottom: 3px solid transparent;
+	img{
+		height: 40px;
+	}
 }
 
-.sticky {
-	position: fixed;
-	top: 0;
+.homeButton{
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	img{
+		cursor: pointer;
+	}
+}
+
+.pageTitle{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	height: 32px;
+	color: rgb(255, 255, 255);
+	font-family: 'Futura-Bold', sans-serif;
+	cursor: default;
+}
+
+.split {
+	float: right;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 3px solid transparent;
+	img{
+		height: 40px;
+	}
+}
+
+.searchbar {
+	background-image: url(assets/images/Search.png);
+	background-position: 10px 10px;
+	background-size: 22px;
+	background-color: rgb(38, 104, 171);
+	background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+	width: 15%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: none;
+	border-radius: 8px;
+	float: right;
+	margin-top: 6px;
+}
+
+::placeholder {
+	color: rgb(255, 255, 255);
+	opacity: 1; 
+}
+
+.sidenav {
+    height: calc(100vh - 59px); 
+    width: 256px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(244, 246, 248);
+    overflow-x: hidden;
+    overflow-y: auto; 
+    padding-top: 16px;
+	padding-bottom: 32px;
+}
+
+.sidenav::-webkit-scrollbar {
+	display: none;
+}
+
+.sidenav a {
+	padding: 8px 16px 8px 18px;
+	text-decoration: none;
+	font-family: 'Futura', sans-serif;
+	font-size: 16px;
+	display: block;
+	border: none;
+	background: none;
 	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
 }
 
-.sticky + .content {
-	padding-top: 60px;
+.sidenav a:hover,.dropdown-btn:hover {
+	color: rgb(0, 79, 159);
 }
+
+.mainText{
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	padding: 12px;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: calc(30vh);
+	border-radius: 16px;
+	font-size: 18px;
+	text-align: center;
+}
+
 
 #Table {
 	border-collapse: collapse;
@@ -173,57 +185,60 @@ a:active {
 #Table td {
 	text-align: left;
 	padding: 14px;
-	font-size: 14px;
+	font-size: 12px;
+	a{
+		text-decoration: none;
+	}
 }
 
 #Table th {
 	text-align: left;
 	padding: 14px;
 	font-size: 14px;
+	width: 50%;
 }
 
 #Table tr {
 	border-bottom: transparent;
 }
 
-#Table tr.header, #Table tr:hover {
-	background-color: #f1f1f1;
+#Table tr:hover {
+	background-color: rgb(220, 220, 220);
+	color: rgb(0, 0, 0);
 }
 
-body {
-	transition: background-color 0.5s;
+.tableHeader{
+	background-color: rgb(200, 200, 200);
 }
 
-/*sidenav */
-
-.sidenav {
-	height: 100%;
-	width: 250px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background: linear-gradient(
-		60deg,
-		rgba(0, 0, 0, 0.15) 40%,
-		rgba(255, 255, 255, 0.15) 100%
-	);
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
-	overflow-y: scroll;
+.selectedItem, .dropdown-selected{
+	color: rgb(0, 79, 159);
 }
 
-.sidenav::-webkit-scrollbar {
-	display: none;
+.notSelectedItem{
+	color: rgb(0, 0, 0);
 }
 
-/* Style the sidenav links and the dropdown button */
-.sidenav a,
-.dropdown-btn {
-	padding: 12px 8px 8px 25px;
-	text-decoration: none;
-	font-size: 17px;
+.menuIcons{
+	height: 24px;
+	padding-right: 8px;
+	transition: filter 0.3s ease;
+}
+
+.menuIcon path {
+	fill: none;
+	stroke: black;
+	stroke-width: 0;
+}
+
+.footer + .sidenav {
+    bottom: 8%; 
+}
+
+.dropdown-btn{
+	padding: 8px 16px 8px 18px;
+	font-family: 'Futura', sans-serif;
+	font-size: 16px;
 	display: block;
 	border: none;
 	background: none;
@@ -231,87 +246,67 @@ body {
 	text-align: left;
 	cursor: pointer;
 	outline: none;
-	transition: 0.5s;
-	color: rgb(255, 255, 255);
-}
-
-.sidenav a:hover,
-.dropdown-btn:hover {
-	color: rgb(247, 148, 30);
-}
-
-.sidenav a{
-	color: rgb(255, 255, 255);
-}
-
-.main {
-	margin-left: 200px;
-	font-size: 20px;
-	padding: 0px 10px;
-}
-
-.active {
-	background-color: transparent;
-	transition: 0.5s;
 }
 
 .dropdown-container {
 	display: none;
-	background-color: rgb(0, 102, 179, 0.4);
-	padding-left: 8px;
-	transition: 0.5s;
+	background-color: transparent;
+	padding-left: 16px;
 }
 
-@media screen and (max-height: 450px) {
-	.sidenav {
-		padding-top: 15px;
-	}
-
-	.sidenav a {
-		font-size: 18px;
-	}
+.content{
+	margin-left: 256px;
+	padding:0;
+	height: 100vh; 
+    top: 0;
 }
 
-/* hover tabs*/
+.index{
+	position: fixed;
+	background-image: url(assets/images/background_img.JPG);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-left: 256px;
+	height: calc(100vh - 57px); 
+	width: calc(100% - 256px);
+    bottom: 0;
+}
 
-* {
-	box-sizing: border-box;
+.active {
+	background-color: transparent;
 }
 
 .tab {
 	float: left;
 	background-color: transparent;
 	width: 30%;
-	padding-left: 25px;
-	max-height: 437px;
+	padding-left: 32px;
+	max-height: calc(100vh - 154px); 
 	overflow-y: scroll;
 }
 
-/*button inside the tab´s style */
 .tab button {
 	display: block;
-	background-color: rgba(255, 255, 255, 0.15);
-	color: white;
-	padding: 16px 16px 16px 16px;
+	background-color: rgba(200, 200, 200);
+	color: rgb(0, 0, 0);
+	padding: 16px;
 	width: 100%;
 	border: none;
 	outline: none;
 	text-align: left;
 	cursor: auto;
-	font-size: 20px;
+	font-size: 14px;
 	overflow-y: scroll;
 }
 
 .tab button::-webkit-scrollbar {
-	color: aqua;
+	color: rgb(0, 0, 0);
 }
 
-/*background color of buttons on hover */
 .tab button:hover {
-	background-color: #ffffff;
+	background-color: rgb(255, 255, 255);
 	color: rgb(0, 102, 179);
 	display: block;
-	transition: 0.3s;
 }
 
 .tab button.active {
@@ -321,23 +316,32 @@ body {
 
 .tabcontent {
 	float: left;
-	padding: 16px 16px 16px 16px;
-	background-color: rgb(233, 233, 233, 0.85);
+	padding: 16px;
+	background-color: rgb(255, 255, 255);
 	background-size: 200px;
 	width: 70%;
-	max-height: 437px;
 	display: none;
-	transition: 0.5s;
 	overflow-y: scroll;
+	height: calc(100vh - 154px); 
 }
 
-.tabcontent::-webkit-scrollbar {
-	display: none;
-}
-
-/* floats after the tab */
 .clearfix::after {
 	content: "";
 	clear: both;
 	display: table;
+}
+
+.footer{
+	background-color: rgb(0, 79, 159);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
 }

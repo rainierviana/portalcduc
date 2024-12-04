@@ -10,65 +10,62 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="arquitetura.html">Arquitetura e Topologia</a>
-    <a href="dashboards.html">Dashboards</a>
-    <button class="dropdown-btn">Processos</button>
-    <div class="dropdown-container">
-      <a href="capacidades.html">Capacidade</a>
-      <a href="custos-subitem.html">Custos</a>
-      <a href="desempenho.html">Desempenho</a>
-      <a href="uso.html">Uso</a>
-    </div>
-    <a href="documentacao.html">Documentação</a>
-    <a href="balanceador.html">Balanceador dinâmico</a>
-    <a href="custos.html">Custos</a>
-    <a href="performance.html">Performance</a>
-    <a href="showback.html">Showback</a>
-    <a style="color: rgb(247,148,30);" href="simulacao.html">Simulações e Tendências</a>
-    <a href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank">CESTI35</a>
-    <br>
-    <a>
-      <picture>
-        <img src="../assets/images/bannerceducdarkmode.png" style="width: 200px;">
-      </picture>
-    </a>
-  </div>
+  <header class="header">
+    <a href="../index.html" class="homeButton"><button class="homeButton"><img src="../assets/images/Menu_Icons/Home.svg" alt="Home" /></button></a>
+	  <div class="logo"><img src="../assets/images/CAIXA_volume_negativa.png" alt="Logo CAIXA" /></div>
+		<a class="pageTitle">Portal CDUC</a>
+		<div class="split"><img src="../assets/images/9176.png" alt="Logo 4Bears" /></div>
+    <input type="text" id="input" onkeyup="search()" placeholder="Pesquisar" title="Type in a name" class="searchbar">
+  </header>
 
-  <div id="main">
-    <div class="navbar">
-      <a><img src="../assets/images/CAIXA_volume_negativa.png" height="22"></a>
-      <a class="split"><img src="../assets/images/9176.png" height="40px"></a>
+  <div class="sidenav">
+    <a class="notSelectedItem" href="../pages/arquitetura.html"><img src="../assets/images/Menu_Icons/Arquitetura.svg" alt="Arquitetura" class="menuIcons">Arquitetura e Topologia</a>
+    <a class="notSelectedItem" href="../pages/dashboards.html"><img src="../assets/images/Menu_Icons/Dashboards.svg" alt="Dashboards" class="menuIcons">Dashboards</a>
+    <button class="dropdown-btn"><img src="../assets/images/Menu_Icons/Processos.svg" alt="Processos" class="menuIcons">Processos</button>
+    <div class="dropdown-container">
+      <a class="notSelectedItem" href="../pages/capacidades.html">Capacidade</a>
+      <a class="notSelectedItem" href="../pages/custos-subitem.html">Custos</a>
+      <a class="notSelectedItem" href="../pages/desempenho.html">Desempenho</a>
+      <a class="notSelectedItem" href="../pages/uso.html">Uso</a>
     </div>
+    <a class="notSelectedItem" href="../pages/documentacao.html"><img src="../assets/images/Menu_Icons/Documentacao.svg" alt="Documentação" class="menuIcons">Documentação</a>
+    <a class="notSelectedItem" href="../pages/balanceador.html"><img src="../assets/images/Menu_Icons/Balanceador.svg" alt="Balanceador" class="menuIcons">Balanceador dinâmico</a>
+    <a class="notSelectedItem" href="../pages/custos.html"><img src="../assets/images/Menu_Icons/Custos.svg" alt="Custos" class="menuIcons">Custos</a>
+    <a class="notSelectedItem" href="../pages/performance.html"><img src="../assets/images/Menu_Icons/Performance.svg" alt="Performance" class="menuIcons">Performance</a>
+    <a class="notSelectedItem" href="../pages/showback.html"><img src="../assets/images/Menu_Icons/Showback.svg" alt="Showback" class="menuIcons">Showback</a>
+    <a class="selectedItem" href="../pages/simulacao.html"><img src="../assets/images/Menu_Icons/Simulacao.svg" alt="Simulações" class="menuIcons">Simulações e Tendências</a>
+    <a class="notSelectedItem" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank" rel="noopener"><img src="../assets/images/Menu_Icons/X_Caixa.svg" alt="Caixa" class="menuIcons"/>CESTI35</a>
   </div>
   <br />
+
+  <br />
+  <div class="content">
   <div class="tab">
-    <button class="tablinks" onmouseover="openTab(event, 'simulacao')">Simulações e Tendências</button>
+    <button class="tablinks" onmouseover="tabContent(event, 'simulacao')">Simulações e Tendências</button>
   </div>
 
-  <div id="simulacao" class="tabcontent" style="overflow-y: scroll; height:468px;">
-    <input type="text" id="myInput" onkeyup="search()" placeholder="Pesquisar..." title="Type in a name">
-
+  <div id="simulacao" class="tabcontent">
     <table id="Table">
-      <tr class="header">
-        <th style="width:50%;">Nome</th>
-        <th style="width:50%;">Descrição</th>
+      <tr class="tableHeader">
+        <th>Nome</th>
+        <th>Descrição</th>
       </tr>
       <tr>
-        <td><a href="https://dadnpaplnt006.intra.caixa.gov.br/zetaly/" target="_blank">ZRP-Zetaly Resource Planning</a></td>
-        <td>Apresenta um software com a finalidade de efetuar o planejamento de capacidade das necessidades de processadores (CPU).</td>
+        <td><a href="https://dadnpaplnt006.intra.caixa.gov.br/zetaly/" target="_blank" rel="noopener">ZRP-Zetaly Resource Planning</a></td>
+        <td>Apresentar um software com a finalidade de efetuar o planejamento de capacidade das necessidades de processadores (CPU).</td>
       </tr>
       <tr>
-        <td><a href="http://10.195.97.27:2100/" target="_blank">CCP Tool</a></td>
-        <td>Apresenta um software com a finalidade de efetuar o planejamento de capacidade conectando diretamente no mainframe.</td>
+        <td><a href="http://10.195.97.27:2100/" target="_blank" rel="noopener">CCP Tool</a></td>
+        <td>Apresentar um software com a finalidade de efetuar o planejamento de capacidade conectando diretamente no mainframe.</td>
       </tr>
     </table>
   </div>
 
   <div class="clearfix"></div>
 
-  <script src="../assets/scripts/script.js"></script>
+  <footer class="footer"></footer>
 
+  <script src="../assets/scripts/script.js"></script>
 </body>
 
 </html>
